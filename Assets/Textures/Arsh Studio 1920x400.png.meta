@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 7c7fe276b02dca14ebc547591ec80b00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2527600125156355741
+    second: Arsh Studio 1920x400_0
+  - first:
+      213: 9179397704669612454
+    second: Arsh Studio 1920x400_1
+  - first:
+      213: 221559399252767522
+    second: Arsh Studio 1920x400_2
+  - first:
+      213: 9065711948559267489
+    second: Arsh Studio 1920x400_3
+  - first:
+      213: -1412353883899599924
+    second: Arsh Studio 1920x400_4
+  - first:
+      213: -5999646182372246552
+    second: Arsh Studio 1920x400_5
+  - first:
+      213: 6058082601350379860
+    second: Arsh Studio 1920x400_6
+  - first:
+      213: 2789299221646408612
+    second: Arsh Studio 1920x400_7
+  - first:
+      213: -1776286412838048907
+    second: Arsh Studio 1920x400_8
+  - first:
+      213: 7510557725314971943
+    second: Arsh Studio 1920x400_9
+  - first:
+      213: -7173805487238016861
+    second: Arsh Studio 1920x400_10
+  - first:
+      213: 8459470990441344089
+    second: Arsh Studio 1920x400_11
+  - first:
+      213: -2181414370524339652
+    second: Arsh Studio 1920x400_12
+  - first:
+      213: -263646489437509779
+    second: Arsh Studio 1920x400_13
+  - first:
+      213: -5903969706298128261
+    second: Arsh Studio 1920x400_14
+  - first:
+      213: -2994540461561983647
+    second: Arsh Studio 1920x400_15
+  - first:
+      213: 7477308594985122403
+    second: Arsh Studio 1920x400_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_0
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 206
+        width: 148
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e6d2a0ce6d31320800000000000000
+      internalID: 2527600125156355741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 174
+        width: 208
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a94edee395c36f70800000000000000
+      internalID: 9179397704669612454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_2
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 209
+        width: 85
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2233c198913231300800000000000000
+      internalID: 221559399252767522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_3
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 209
+        width: 71
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6b3e92cf0efcd70800000000000000
+      internalID: 9065711948559267489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_4
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 207
+        width: 72
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3650520af466ce0800000000000000
+      internalID: -1412353883899599924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_5
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 209
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb7ca9a599fcbca0800000000000000
+      internalID: -5999646182372246552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_6
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 267
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459b6716702a21450800000000000000
+      internalID: 6058082601350379860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_7
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 222
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abf18e1dd495b620800000000000000
+      internalID: 2789299221646408612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_8
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 218
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b6f6f2bec5957e0800000000000000
+      internalID: -1776286412838048907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_9
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 129
+        width: 107
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729f672657cda3860800000000000000
+      internalID: 7510557725314971943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_10
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 115
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a01e65fae5817c90800000000000000
+      internalID: -7173805487238016861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_11
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 102
+        width: 72
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c6afcab04166570800000000000000
+      internalID: 8459470990441344089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_12
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 103
+        width: 73
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32e6f8003f0ab1e0800000000000000
+      internalID: -2181414370524339652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_13
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 102
+        width: 74
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d676cca2ae6575cf0800000000000000
+      internalID: -263646489437509779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_14
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 103
+        width: 76
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78ce6b25d2e01ea0800000000000000
+      internalID: -5903969706298128261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_15
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 103
+        width: 20
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d4013e0514176d0800000000000000
+      internalID: -2994540461561983647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arsh Studio 1920x400_16
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 102
+        width: 84
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a3018fc8cb4c760800000000000000
+      internalID: 7477308594985122403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Arsh Studio 1920x400_0: 2527600125156355741
+      Arsh Studio 1920x400_1: 9179397704669612454
+      Arsh Studio 1920x400_10: -7173805487238016861
+      Arsh Studio 1920x400_11: 8459470990441344089
+      Arsh Studio 1920x400_12: -2181414370524339652
+      Arsh Studio 1920x400_13: -263646489437509779
+      Arsh Studio 1920x400_14: -5903969706298128261
+      Arsh Studio 1920x400_15: -2994540461561983647
+      Arsh Studio 1920x400_16: 7477308594985122403
+      Arsh Studio 1920x400_2: 221559399252767522
+      Arsh Studio 1920x400_3: 9065711948559267489
+      Arsh Studio 1920x400_4: -1412353883899599924
+      Arsh Studio 1920x400_5: -5999646182372246552
+      Arsh Studio 1920x400_6: 6058082601350379860
+      Arsh Studio 1920x400_7: 2789299221646408612
+      Arsh Studio 1920x400_8: -1776286412838048907
+      Arsh Studio 1920x400_9: 7510557725314971943
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1501832329282185925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7314348747232719200}
+  - component: {fileID: 1367574089727672379}
+  m_Layer: 0
+  m_Name: Day Night Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7314348747232719200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501832329282185925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367574089727672379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501832329282185925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5635f8218c68bb049826a0f818edea4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDay: 1
+  sunLight: {fileID: 0}
+  lightRays:
+  - {fileID: 0}
+  - {fileID: 0}
+  virtualCam_Night: {fileID: 0}
+  forestDayAmb: {fileID: 0}
+  sunMorningIntensity: 0.3
+  raysMorningIntensity: 1
+  raysMorningColor: {r: 0.9647059, g: 1, b: 0.60784316, a: 1}
+  morningVol: {fileID: 0}
+  sunAfternoonIntensity: 0.12
+  raysAfternoonIntensity: 0.6
+  raysAfternoonColor: {r: 1, g: 0.47843137, b: 0.21568628, a: 1}
+  forestNightScaryAmb: {fileID: 0}
+  sunNightIntensity: 0.002
+  raysNightIntensity: 0.2
+  raysNightColor: {r: 0.7783019, g: 0.9880163, b: 1, a: 1}
+  nightVol: {fileID: 0}

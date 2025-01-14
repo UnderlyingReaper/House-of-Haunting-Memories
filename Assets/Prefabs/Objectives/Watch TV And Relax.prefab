@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1241211292389688952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5064577403940180338}
+  - component: {fileID: 1688289569766552184}
+  - component: {fileID: 3662957205702721410}
+  - component: {fileID: 6463368423798798797}
+  - component: {fileID: 9212450716683365764}
+  - component: {fileID: 2492974983526813690}
+  m_Layer: 0
+  m_Name: Watch TV And Relax
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5064577403940180338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241211292389688952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1688289569766552184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241211292389688952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b177508ce28281b49b8ee698eb3af116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveTask: Watch TV And Relax
+  start: 0
+  InitializeMonoList:
+  - {fileID: 2492974983526813690}
+  conditionMono: {fileID: 6463368423798798797}
+  progressMono: {fileID: 0}
+  endMono: {fileID: 0}
+  additionalEndMono:
+  - {fileID: 9212450716683365764}
+  nextObjective: {fileID: 0}
+  makePlayerSpeakMono: {fileID: 3662957205702721410}
+  speechDelay: 0
+  timeToFinish: 30
+--- !u!114 &3662957205702721410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241211292389688952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d779ffa453a5bfb438c8a727f6184113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSpeechData: {fileID: 11400000, guid: 659fe549db22ef74696882ea66f8901a, type: 2}
+  hintSpeechData: {fileID: 11400000, guid: 0b62018c25fc31f43b12ffa2eb11f787, type: 2}
+--- !u!114 &6463368423798798797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241211292389688952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15a8cf44b87a27409e492c560fef963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionSource: {fileID: 0}
+  actionName: OnFinishWatching
+--- !u!114 &9212450716683365764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241211292389688952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626400422a99f714e9195b590a1ba687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: feabd0957486d5d40bc66a76c971839e, type: 2}
+--- !u!114 &2492974983526813690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241211292389688952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a45b4f5ad069b4d86bf52dcef30d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monoBehaviourList:
+  - {fileID: 0}

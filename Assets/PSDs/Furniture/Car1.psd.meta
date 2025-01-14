@@ -1,0 +1,1149 @@
+fileFormatVersion: 2
+guid: b668313305e71cc49892440bcaba739a
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 150
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: Car1_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2000
+      height: 1000
+    spriteID: 3b45fd7238bc67b44b78b388eeb39808
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Bolts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 460
+      y: 463
+      width: 69
+      height: 67
+    spriteID: b02876a20f8410149a87d60444bd94f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 460, y: 463}
+    spritePosition: {x: 621, y: 47}
+  - name: Inside
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1241
+      y: 136
+      width: 78
+      height: 78
+    spriteID: 6e2963c9e97fb744594cb50bb6299a88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1241, y: 136}
+    spritePosition: {x: 616, y: 43}
+  - name: Tire B
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 366
+      width: 165
+      height: 165
+    spriteID: 176bf672fec8488438cb7b667cda616f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 366}
+    spritePosition: {x: 572, y: 0}
+  - name: Bolts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 537
+      y: 463
+      width: 69
+      height: 67
+    spriteID: 00a5cda5a5538fb4ab1e0afa306f284a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 537, y: 463}
+    spritePosition: {x: 1376, y: 47}
+  - name: Inside
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1327
+      y: 136
+      width: 78
+      height: 78
+    spriteID: 4bf89fb97f7dce54bbb12baf8c96ac11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1327, y: 136}
+    spritePosition: {x: 1371, y: 43}
+  - name: Tire F
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 366
+      width: 165
+      height: 165
+    spriteID: 0a1e71440e0997a46bdb8e9cd8bb2446
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 366}
+    spritePosition: {x: 1327, y: 0}
+  - name: Door Handle B
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1796
+      y: 186
+      width: 57
+      height: 12
+    spriteID: a3bf0a38cac479540983ee485b6f6fa7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1796, y: 186}
+    spritePosition: {x: 737, y: 211}
+  - name: Door Handle F
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1567
+      y: 186
+      width: 57
+      height: 13
+    spriteID: 5c7986a134ec3fd46bd62dbc610fd3e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1567, y: 186}
+    spritePosition: {x: 991, y: 210}
+  - name: Lighter Frame 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 886
+      y: 226
+      width: 279
+      height: 129
+    spriteID: b560da89b4defdd4db59b9c0db194cbf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 886, y: 226}
+    spritePosition: {x: 429, y: 258}
+  - name: Lighter Frame 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 695
+      y: 392
+      width: 798
+      height: 14
+    spriteID: a2689a5cd0f940f47aae6f91a71dc28a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 695, y: 392}
+    spritePosition: {x: 430, y: 254}
+  - name: Frame 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1921
+      y: 226
+      width: 104
+      height: 124
+    spriteID: d0538165a3f235546a4fd18dcd9f71e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1921, y: 226}
+    spritePosition: {x: 655, y: 263}
+  - name: Frame 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 539
+      width: 50
+      height: 124
+    spriteID: aa62120558376eb4db5cf048cb5081f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 539}
+    spritePosition: {x: 914, y: 263}
+  - name: Window 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1241
+      y: 4
+      width: 318
+      height: 124
+    spriteID: d54d0bfe8e52f7742b49b0d80e9ba7aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1241, y: 4}
+    spritePosition: {x: 419, y: 263}
+  - name: Window 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1470
+      y: 226
+      width: 247
+      height: 124
+    spriteID: 9682ccfc7209b00478c16e00618a9b61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1470, y: 226}
+    spritePosition: {x: 685, y: 263}
+  - name: Window 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1173
+      y: 226
+      width: 289
+      height: 122
+    spriteID: e8b15f02feb5b9f4db22edbb97d6eff6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1173, y: 226}
+    spritePosition: {x: 945, y: 264}
+  - name: WindShield
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1725
+      y: 226
+      width: 188
+      height: 131
+    spriteID: a16356a2399676c44941fba72edb8d04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1725, y: 226}
+    spritePosition: {x: 1079, y: 262}
+  - name: Top
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 226
+      width: 874
+      height: 132
+    spriteID: d38deefbae955a648a1b4586bdfdf0af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 226}
+    spritePosition: {x: 386, y: 263}
+  - name: Top Detail
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 392
+      width: 337
+      height: 38
+    spriteID: 01cdfcbfe2dd7d442975e13b2cd9d467
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 350, y: 392}
+    spritePosition: {x: 737, y: 376}
+  - name: Front Fender
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1413
+      y: 136
+      width: 102
+      height: 52
+    spriteID: c4c3ccca9e7e48d4cb95f416be1cbea5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1413, y: 136}
+    spritePosition: {x: 1531, y: 88}
+  - name: Back Fender
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 463
+      width: 102
+      height: 52
+    spriteID: 794a3eb60f870924ca02e220a00b0c5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 350, y: 463}
+    spritePosition: {x: 360, y: 88}
+  - name: Ventilation
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1413
+      y: 196
+      width: 97
+      height: 15
+    spriteID: 128dbd22d1a42e34689cbc3dbe4c8ea5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1413, y: 196}
+    spritePosition: {x: 491, y: 228}
+  - name: Line
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 366
+      width: 1233
+      height: 18
+    spriteID: 8b8578c352a994d41a737dbe114814d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 350, y: 366}
+    spritePosition: {x: 382, y: 227}
+  - name: Front Indicator
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1632
+      y: 186
+      width: 46
+      height: 16
+    spriteID: 85e4c4e129e854c40b64a0ff8981441a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1632, y: 186}
+    spritePosition: {x: 1531, y: 198}
+  - name: Back Indicator
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1686
+      y: 186
+      width: 46
+      height: 16
+    spriteID: 1afbe9687b3a5cb458222a5558e8b9ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1686, y: 186}
+    spritePosition: {x: 439, y: 206}
+  - name: Wheel B Holder
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1567
+      y: 4
+      width: 221
+      height: 174
+    spriteID: 47255c4e386f626439ad2a20df5c554f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1567, y: 4}
+    spritePosition: {x: 563, y: 0}
+  - name: Wheel F Holder
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1796
+      y: 4
+      width: 221
+      height: 174
+    spriteID: a8ba111a3cef55641b2758426829a514
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1796, y: 4}
+    spritePosition: {x: 1283, y: 0}
+  - name: Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1229
+      height: 214
+    spriteID: 5a80950fc8d0ddf4b94e21772a8815eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 386, y: 49}
+  - name: Body Down Detail
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 438
+      width: 630
+      height: 17
+    spriteID: b8f08ad566f264a4fa12024622ae5929
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 350, y: 438}
+    spritePosition: {x: 716, y: 40}
+  - name: Front Light
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1523
+      y: 136
+      width: 12
+      height: 43
+    spriteID: 93b4ad103d3076948a9013b38b67c111
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1523, y: 136}
+    spritePosition: {x: 1609, y: 185}
+  - name: Back Light
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1543
+      y: 136
+      width: 12
+      height: 43
+    spriteID: 515d59d5d39c94f4a8a84e65613ff80e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1543, y: 136}
+    spritePosition: {x: 379, y: 171}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Bolts
+    spriteName: Bolts
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b02876a20f8410149a87d60444bd94f2
+    layerID: 0
+    mosaicPosition: {x: 460, y: 463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Inside
+    spriteName: Inside
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6e2963c9e97fb744594cb50bb6299a88
+    layerID: -1475689218
+    mosaicPosition: {x: 1241, y: 136}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tire B
+    spriteName: Tire B
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 176bf672fec8488438cb7b667cda616f
+    layerID: 1716928186
+    mosaicPosition: {x: 4, y: 366}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bolts
+    spriteName: Bolts
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 00a5cda5a5538fb4ab1e0afa306f284a
+    layerID: -1327130290
+    mosaicPosition: {x: 537, y: 463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Inside
+    spriteName: Inside
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4bf89fb97f7dce54bbb12baf8c96ac11
+    layerID: -2044605182
+    mosaicPosition: {x: 1327, y: 136}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tire F
+    spriteName: Tire F
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0a1e71440e0997a46bdb8e9cd8bb2446
+    layerID: -608670642
+    mosaicPosition: {x: 177, y: 366}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Door Handle B
+    spriteName: Door Handle B
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a3bf0a38cac479540983ee485b6f6fa7
+    layerID: -1125437402
+    mosaicPosition: {x: 1796, y: 186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Door Handle F
+    spriteName: Door Handle F
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5c7986a134ec3fd46bd62dbc610fd3e8
+    layerID: -1125437406
+    mosaicPosition: {x: 1567, y: 186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lighter Frame 2
+    spriteName: Lighter Frame 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b560da89b4defdd4db59b9c0db194cbf
+    layerID: -1804499762
+    mosaicPosition: {x: 886, y: 226}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lighter Frame 1
+    spriteName: Lighter Frame 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a2689a5cd0f940f47aae6f91a71dc28a
+    layerID: -1804499759
+    mosaicPosition: {x: 695, y: 392}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Frame 1
+    spriteName: Frame 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d0538165a3f235546a4fd18dcd9f71e8
+    layerID: -1363871912
+    mosaicPosition: {x: 1921, y: 226}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Frame 2
+    spriteName: Frame 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: aa62120558376eb4db5cf048cb5081f6
+    layerID: -1363871913
+    mosaicPosition: {x: 4, y: 539}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Window 3
+    spriteName: Window 3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d54d0bfe8e52f7742b49b0d80e9ba7aa
+    layerID: 1530570095
+    mosaicPosition: {x: 1241, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Window 2
+    spriteName: Window 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9682ccfc7209b00478c16e00618a9b61
+    layerID: -1198313260
+    mosaicPosition: {x: 1470, y: 226}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Window 1
+    spriteName: Window 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e8b15f02feb5b9f4db22edbb97d6eff6
+    layerID: 367770681
+    mosaicPosition: {x: 1173, y: 226}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: WindShield
+    spriteName: WindShield
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a16356a2399676c44941fba72edb8d04
+    layerID: -864104113
+    mosaicPosition: {x: 1725, y: 226}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Top
+    spriteName: Top
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d38deefbae955a648a1b4586bdfdf0af
+    layerID: 728636915
+    mosaicPosition: {x: 4, y: 226}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Top Detail
+    spriteName: Top Detail
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 01cdfcbfe2dd7d442975e13b2cd9d467
+    layerID: 1880321250
+    mosaicPosition: {x: 350, y: 392}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Front Fender
+    spriteName: Front Fender
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c4c3ccca9e7e48d4cb95f416be1cbea5
+    layerID: -92211769
+    mosaicPosition: {x: 1413, y: 136}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Back Fender
+    spriteName: Back Fender
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 794a3eb60f870924ca02e220a00b0c5a
+    layerID: 436101537
+    mosaicPosition: {x: 350, y: 463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ventilation
+    spriteName: Ventilation
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 128dbd22d1a42e34689cbc3dbe4c8ea5
+    layerID: -426003551
+    mosaicPosition: {x: 1413, y: 196}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Line
+    spriteName: Line
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8b8578c352a994d41a737dbe114814d5
+    layerID: -649855340
+    mosaicPosition: {x: 350, y: 366}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Front Indicator
+    spriteName: Front Indicator
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 85e4c4e129e854c40b64a0ff8981441a
+    layerID: -976768608
+    mosaicPosition: {x: 1632, y: 186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Back Indicator
+    spriteName: Back Indicator
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1afbe9687b3a5cb458222a5558e8b9ac
+    layerID: -1341054672
+    mosaicPosition: {x: 1686, y: 186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Wheel B Holder
+    spriteName: Wheel B Holder
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 47255c4e386f626439ad2a20df5c554f
+    layerID: 85635085
+    mosaicPosition: {x: 1567, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Wheel F Holder
+    spriteName: Wheel F Holder
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a8ba111a3cef55641b2758426829a514
+    layerID: 90370321
+    mosaicPosition: {x: 1796, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body
+    spriteName: Body
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5a80950fc8d0ddf4b94e21772a8815eb
+    layerID: -723767166
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body Down Detail
+    spriteName: Body Down Detail
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b8f08ad566f264a4fa12024622ae5929
+    layerID: 1268774115
+    mosaicPosition: {x: 350, y: 438}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Front Light
+    spriteName: Front Light
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 93b4ad103d3076948a9013b38b67c111
+    layerID: -305282081
+    mosaicPosition: {x: 1523, y: 136}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Back Light
+    spriteName: Back Light
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 515d59d5d39c94f4a8a84e65613ff80e
+    layerID: -1647964523
+    mosaicPosition: {x: 1543, y: 136}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

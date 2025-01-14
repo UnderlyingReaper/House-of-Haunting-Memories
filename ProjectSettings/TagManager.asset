@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Gameplay UI
+  - Global Volume
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - Player
+  - Slope
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Sky
+    uniqueID: 867015359
+    locked: 0
+  - name: Background3
+    uniqueID: 2402386715
+    locked: 0
+  - name: Background2
+    uniqueID: 4087295011
+    locked: 0
+  - name: Background
+    uniqueID: 4009822185
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3044810029
+    locked: 0
+  - name: Forground
+    uniqueID: 3897292627
+    locked: 0
+  m_RenderingLayers:
+  - Default
