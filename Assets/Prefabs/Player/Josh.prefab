@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFacingRight: 0
   frictionAmt: 0.2
-  speed: 2.3
+  speed: 2.1
   acceleration: 8
   deccerlation: 8
   velPower: 0.9

@@ -11,6 +11,7 @@ public class BrokenCarInteraction : MonoBehaviour, IInteractible
 
 
     private IPlayerSpeak _playerSpeak;
+    private AudioSource _audioSource;
 
 
 
@@ -18,6 +19,7 @@ public class BrokenCarInteraction : MonoBehaviour, IInteractible
     private void Awake()
     {
         _playerSpeak = GetComponent<IPlayerSpeak>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public int GetPriority()
@@ -40,6 +42,7 @@ public class BrokenCarInteraction : MonoBehaviour, IInteractible
         if(!enabled) return;
 
         Sequence sequence = DOTween.Sequence();
+        _audioSource.Play();
 
         foreach(oneSpeech speech in playerSpeecheList)
         {

@@ -68,7 +68,7 @@ public class TV : MonoBehaviour, IInteractible, ISpecialInteraction
         _canvasgGroup.DOFade(1, 2);
 
         yield return new WaitForSeconds(7);
-        _dayNightHandler.SetAfternoon();
+        if(_dayNightHandler.isDay) _dayNightHandler.SetAfternoon();
 
         _canvasgGroup.DOFade(0, 2);
         GameplayInputManager.Instance.enabled = true;
