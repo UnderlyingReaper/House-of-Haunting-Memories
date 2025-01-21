@@ -13,6 +13,7 @@ public class OpenCloseBehaviour : MonoBehaviour, IDoorBehaviour
     [SerializeField] private AudioClip closeClip;
 
     private ShadowCaster2D _shadowCaster;
+    private Sequence _sequence;
 
 
     void Awake()
@@ -32,20 +33,30 @@ public class OpenCloseBehaviour : MonoBehaviour, IDoorBehaviour
 
     void CloseDoor(Door door)
     {
-        isOpen = false;
-        doorTransform.DOScaleX(0.01f, duration);
-        doorCollider.enabled = true;
-        _shadowCaster.enabled = true;
+        _sequence?.Kill();
 
-        PlaySound(door.audioSource, closeClip);
+        isOpen = false;
+
+        _sequence = DOTween.Sequence().
+        Append(doorTransform.DOScaleX(0.01f, duration))
+        .InsertCallback(0.5f, () => PlaySound(door.audioSource, closeClip))
+        .InsertCallback(duration/2, () => {
+            doorCollider.enabled = true;
+            _shadowCaster.enabled = true;
+        });
     }
 
     public void OpenDoor(Door door, bool withSound = true)
-    {
+    {   
         isOpen = true;
         doorTransform.DOScaleX(1, duration);
         doorCollider.enabled = false;
         _shadowCaster.enabled = false;
+
+        DOTween.Sequence()
+        .Append(door.doorHandle.DORotate(new Vector3(0, 0, 30), 0.4f))
+        .AppendInterval(0.05f)
+        .Append(door.doorHandle.DORotate(Vector3.zero, 0.4f));
         
         if(withSound) PlaySound(door.audioSource, openClip);
     }

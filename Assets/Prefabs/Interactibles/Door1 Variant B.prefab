@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1000
   text: Interact
+  doorHandle: {fileID: 9199707449265505700}
   additionalBehaviours: []
   lockModeMono: {fileID: 0}
   doorBehaviour: {fileID: 5270721871903800299}
@@ -489,5 +490,10 @@ Transform:
 --- !u!212 &3710489485807139054 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: -4691381383639723871, guid: b18db8956cacda94da021453614ae1c1, type: 3}
+  m_PrefabInstance: {fileID: 980258577603962959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9199707449265505700 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -994874588223410709, guid: b18db8956cacda94da021453614ae1c1, type: 3}
   m_PrefabInstance: {fileID: 980258577603962959}
   m_PrefabAsset: {fileID: 0}

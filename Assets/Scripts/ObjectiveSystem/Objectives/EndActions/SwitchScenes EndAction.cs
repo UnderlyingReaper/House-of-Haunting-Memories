@@ -11,7 +11,7 @@ public class SwitchScenesEndAction : MonoBehaviour, IObjectiveEndAction
 
     public void EndExecute()
     {
-        if(SceneManager.GetSceneByName(sceneName) != null) SceneManager.LoadScene(sceneName);
+        if(SceneUtility.GetBuildIndexByScenePath(sceneName) != -1) SceneManager.LoadScene(sceneName);
         else SceneManager.LoadScene(creditSceneName);
 
         OnExecutionEnd?.Invoke(this, EventArgs.Empty);

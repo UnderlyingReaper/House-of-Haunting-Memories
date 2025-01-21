@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Staircase Locked Variant 2
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: You should just forger about her... alright?!
+  text: Why dont you just forget about her... alright?!
   time: 3

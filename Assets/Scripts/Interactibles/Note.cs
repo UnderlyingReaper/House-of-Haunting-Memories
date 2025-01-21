@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Note : MonoBehaviour, IInteractible
 {
@@ -15,6 +16,9 @@ public class Note : MonoBehaviour, IInteractible
     private PlayerControls.GameplayActions controls {
         get { return GameplayInputManager.Instance.playerControls.Gameplay; }
     }
+    private PlayerControls.UIActions ui {
+        get { return GameplayInputManager.Instance.playerControls.UI; }
+    }
 
 
 
@@ -25,6 +29,8 @@ public class Note : MonoBehaviour, IInteractible
         _audioSource = GetComponentInChildren<AudioSource>();
 
         _canvasGroup.alpha = 0;
+
+        ui.Back.performed += (InputAction.CallbackContext context) => Close();
     }
     private void OnEnable() => gameObject.SetActive(true);
     private void OnDisable() => gameObject.SetActive(false);
@@ -48,17 +54,25 @@ public class Note : MonoBehaviour, IInteractible
     {
         if(!enabled) return;
 
-        if(_isOpen)
-        {
-            _canvasGroup.DOFade(0, 1);
-            _isOpen = false;
-        }
+        if(_isOpen) Close();
         else
         {
             _audioSource.PlayOneShot(readClip);
             _canvasGroup.DOFade(1, 1);
             _isOpen = true;
+
+            controls.Disable();
+            ui.Enable();
         }
     }
     public void InteractStart(Transform interactorTransform) {}
+
+    private void Close()
+    {
+        _canvasGroup.DOFade(0, 1);
+        _isOpen = false;
+
+        controls.Enable();
+        ui.Disable();
+    }
 }

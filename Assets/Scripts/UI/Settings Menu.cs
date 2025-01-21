@@ -10,6 +10,8 @@ public class SettingsMenu : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] private SoundSettings soundSettings;
     [SerializeField] private GraphicsSettings graphicsSettings;
+    [SerializeField] private RectTransform controlsSettings;
+
     [SerializeField] private RectTransform cogWheelR;
     [SerializeField] private RectTransform cogWheelL;
     [SerializeField] private float maxTurnAngle;
@@ -135,8 +137,10 @@ public class SettingsMenu : MonoBehaviour
 
     public void OpenGraphicsTabBtn()
     {
-        soundSettings.soundTab.gameObject.SetActive(false);
         graphicsSettings.graphicsTab.gameObject.SetActive(true);
+
+        soundSettings.soundTab.gameObject.SetActive(false);
+        controlsSettings.gameObject.SetActive(false);
         
         graphicsSettings.graphicsTab.anchoredPosition = new Vector2(graphicsSettings.graphicsTab.anchoredPosition.x, -150);
         graphicsSettings.graphicsTab.DOAnchorPosY(-130, 0.5f).SetUpdate(true);
@@ -145,10 +149,23 @@ public class SettingsMenu : MonoBehaviour
     public void OpenSoundTabBtn()
     {
         soundSettings.soundTab.gameObject.SetActive(true);
+
+        controlsSettings.gameObject.SetActive(false);
         graphicsSettings.graphicsTab.gameObject.SetActive(false);
         
         soundSettings.soundTab.anchoredPosition = new Vector2(soundSettings.soundTab.anchoredPosition.x, -150);
         soundSettings.soundTab.DOAnchorPosY(-130, 0.5f).SetUpdate(true);
+    }
+
+    public void OpenControlsTabBtn()
+    {
+        controlsSettings.gameObject.SetActive(true);
+
+        soundSettings.soundTab.gameObject.SetActive(false);
+        graphicsSettings.graphicsTab.gameObject.SetActive(false);
+        
+        controlsSettings.anchoredPosition = new Vector2(soundSettings.soundTab.anchoredPosition.x, -150);
+        controlsSettings.DOAnchorPosY(-130, 0.5f).SetUpdate(true);
     }
     #endregion
 }

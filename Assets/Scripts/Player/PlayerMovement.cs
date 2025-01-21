@@ -18,15 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform checkPoint;
     [SerializeField] private float checkRadius;
 
-    [Header("Jump")]
-    [SerializeField] private float jumpFore;
-    [SerializeField] private float fallingGravityMp;
-    [SerializeField] private float gravityScale;
-    
 
-
-    private bool _allowJump;
-    private bool _isJumpPressed;
     private Rigidbody2D _rb;
     private PlayerControls.GameplayActions controls {
         get { return GameplayInputManager.Instance.playerControls.Gameplay; }
@@ -36,25 +28,8 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-
-        _allowJump = false;
-        _rb.gravityScale = gravityScale;
     }
-    private void Start()
-    {
-        controls.Jump.started += (InputAction.CallbackContext context) => {
-            _isJumpPressed = true;
-        };
-        controls.Jump.canceled += (InputAction.CallbackContext context) => {
-            _isJumpPressed = false;
-        };
-    }
-
-    private void Update()
-    {
-        if(isGrounded) _allowJump = true;
-        else _allowJump = false;
-    }
+    
     private void FixedUpdate()
     {
         float horizontalInput = controls.Movement.ReadValue<Vector2>().x;
@@ -83,15 +58,17 @@ public class PlayerMovement : MonoBehaviour
         }
         #endregion
 
-        #region Jump
-        if(isGrounded && _isJumpPressed && _allowJump)
-            _rb.AddForce(Vector2.up * jumpFore * _rb.mass, ForceMode2D.Force);
-        #endregion
+        #region Slope Handeling
+        RaycastHit2D hit = Physics2D.Raycast(checkPoint.position, Vector3.down, 1, groundMask);
+        // Cast a ray downward from the player's feet
+        if (hit)
+        {
+            Vector3 surfaceNormal = hit.normal;
+            float slopeAngle = Vector3.Angle(surfaceNormal, Vector3.up);
 
-        #region Jump Gravity
-        if(_rb.linearVelocityY < 0)
-            _rb.gravityScale = gravityScale * fallingGravityMp;
-        else _rb.gravityScale = gravityScale;
+            if(slopeAngle > 0 && isGrounded && horizontalInput == 0) _rb.gravityScale = 0;
+            else _rb.gravityScale = 1;
+        }
         #endregion
 
         if((horizontalInput > 0 && !isFacingRight) || (horizontalInput < 0 && isFacingRight)) Flip();

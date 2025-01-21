@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Day 3.unity
     guid: 748f29c5b757bc044a2e03cecd634adf
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 1d2b72e6c599cf44e9e95dfc92502f15
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

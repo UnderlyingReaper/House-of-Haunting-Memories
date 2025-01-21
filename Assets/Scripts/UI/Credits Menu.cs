@@ -38,7 +38,7 @@ public class CreditsMenu : MonoBehaviour
         .Append(creditsCanvas.DOFade(1, 3))
         .Append(creditsHolder.DOAnchorPosY(maxYCreditPos, scrollTime).SetEase(Ease.Linear));
 
-        if(SceneManager.GetSceneByName("Day 3") != null)
+        if(SceneUtility.GetBuildIndexByScenePath("Day 3") != -1)
         {
             sequence.Append(infoCanvas.DOFade(1, 3))
             .AppendInterval(3)

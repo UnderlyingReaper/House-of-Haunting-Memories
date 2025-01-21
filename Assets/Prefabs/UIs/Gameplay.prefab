@@ -600,7 +600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a76524e5862a344ac73e2bd7fdda32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionDuration: 2
+  transitionDuration: 1
+  top: {fileID: 3183477211199874741}
+  bottom: {fileID: 3280980805494138041}
 --- !u!1 &5141499525800759915
 GameObject:
   m_ObjectHideFlags: 0

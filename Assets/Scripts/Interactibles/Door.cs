@@ -9,6 +9,9 @@ public class Door : MonoBehaviour, IInteractible
     [SerializeField] private string text = "Interact";
 
     [Space(20)]
+    public Transform doorHandle;
+    public Transform mainDoor;
+
     [SerializeField] private List<MonoBehaviour> additionalBehaviours;
     [SerializeField] private MonoBehaviour lockModeMono;
     [SerializeField] private MonoBehaviour doorBehaviour;

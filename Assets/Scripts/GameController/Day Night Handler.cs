@@ -43,9 +43,18 @@ public class DayNightHandler : MonoBehaviour
 
     private void Awake()
     {
-        _ambienceOrgVal = ambienceSource.volume;
-        ambienceSource.volume = 0;
-        ambienceSource.DOFade(_ambienceOrgVal, 3);
+
+        if(isDay)
+        {
+            _ambienceOrgVal = ambienceSource.volume;
+            ambienceSource.volume = 0;
+            ambienceSource.DOFade(_ambienceOrgVal, 3);
+        }
+        else
+        {
+            forestNightScaryAmb.volume = 0;
+            forestNightScaryAmb.DOFade(1, 2);
+        }
     }
     
     public void SetAfternoon()

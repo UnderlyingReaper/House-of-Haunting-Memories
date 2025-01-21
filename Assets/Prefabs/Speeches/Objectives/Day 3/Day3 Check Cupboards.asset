@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day3 Check Cupboards
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I should check the cupboards instead, someone must be inside.
+  text: I should check the cupboards, someone must be inside instead.
   time: 3.5
