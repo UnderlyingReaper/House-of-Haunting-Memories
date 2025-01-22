@@ -15,6 +15,8 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private RectTransform cogWheelR;
     [SerializeField] private RectTransform cogWheelL;
     [SerializeField] private float maxTurnAngle;
+
+    public event Action OnSettingsClose;
     
 
 
@@ -69,7 +71,8 @@ public class SettingsMenu : MonoBehaviour
         soundSettings.sfxVolSlider.onValueChanged.AddListener(soundSettings.OnSFXVolChange);
         soundSettings.musicVolSlider.onValueChanged.AddListener(soundSettings.OnMusicVolChange);
 
-        LoadValues();
+        graphicsSettings.LoadValues();
+        soundSettings.LoadValues();
     }
 
 
@@ -77,30 +80,7 @@ public class SettingsMenu : MonoBehaviour
 
 
     #region Background Processes
-    private void LoadValues()
-    {
-        // Graphics Settings
-        graphicsSettings.bloomToggle.isOn = Convert.ToBoolean(PlayerPrefs.GetInt("Bloom Setting", 1));
-        graphicsSettings.qualityDropDown.value = PlayerPrefs.GetInt("Quality Setting", 2);
-
-        graphicsSettings.frameLimitDropDown.value = PlayerPrefs.GetInt("Frame Rate Limit Setting", 0);
-        graphicsSettings.frameLimitDropDown.RefreshShownValue();
-
-        graphicsSettings.windowModeDropDown.value = PlayerPrefs.GetInt("Window Mode Setting", 0);
-        graphicsSettings.windowModeDropDown.RefreshShownValue();
-
-        graphicsSettings.resolutionScaleSlider.value = PlayerPrefs.GetFloat("Resolution Scale Setting", 1);
-
-        int indexVal = PlayerPrefs.GetInt("Resolution Setting", graphicsSettings.resolutionDropDown.value);
-        graphicsSettings.resolutionDropDown.SetValueWithoutNotify(indexVal);
-        graphicsSettings.resolutionDropDown.RefreshShownValue();
-        graphicsSettings.ResolutionValueChangeWithoutNotify(indexVal);
-
-        // Sound Settings
-        soundSettings.masterVolSlider.value = PlayerPrefs.GetInt("MasterVol", 100);
-        soundSettings.sfxVolSlider.value = PlayerPrefs.GetInt("SFXVol", 100);
-        soundSettings.musicVolSlider.value = PlayerPrefs.GetInt("MusicVol", 100);
-    }
+    
     public void RotateCogWheel()
     {
         int rand = UnityEngine.Random.Range(0, 2);
@@ -133,6 +113,8 @@ public class SettingsMenu : MonoBehaviour
 
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+
+        OnSettingsClose?.Invoke();
     }
 
     public void OpenGraphicsTabBtn()

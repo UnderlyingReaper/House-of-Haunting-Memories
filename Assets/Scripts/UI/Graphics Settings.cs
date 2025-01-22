@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -33,6 +32,15 @@ public class GraphicsSettings : MonoBehaviour
     [HideInInspector] public Resolution[] resolutions;
 
 
+    // Apply Settings Val Holder
+    private FullScreenMode _fullScreenModeChosen;
+    private int _fullScreenModeChosenInt;
+
+    private int _newWidth, _newHeight;
+    private float _resScaleVal;
+
+
+
 
     public void DefaultGraphicsSettingsBtn()
     {
@@ -50,6 +58,69 @@ public class GraphicsSettings : MonoBehaviour
         resolutionDropDown.value = orgResolutionIndex;
         resolutionDropDown.RefreshShownValue();
     }
+
+    public void ApplyBtn()
+    {
+        // Fullscreen Mode
+        if(Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
+        {
+            resolutionCanvasGroup.DOFade(0.2f, 0.5f).SetUpdate(true);
+            resolutionCanvasGroup.interactable = false;
+            resolutionCanvasGroup.blocksRaycasts = false;
+        }
+        else
+        {
+            resolutionCanvasGroup.DOFade(1, 0.5f).SetUpdate(true);
+            resolutionCanvasGroup.interactable = true;
+            resolutionCanvasGroup.blocksRaycasts = true;
+        }
+        Screen.fullScreenMode = _fullScreenModeChosen;
+        PlayerPrefs.SetInt("Window Mode Setting", _fullScreenModeChosenInt);
+
+
+        // Resoltion Scale Slider
+        Screen.SetResolution(_newWidth, _newHeight, Screen.fullScreen);
+        PlayerPrefs.SetFloat("Resolution Scale Setting", _resScaleVal);
+    }
+
+    public void LoadValues()
+    {
+        settingsMenu.OnSettingsClose += OnSettingsClose;
+        
+        // Graphics Settings
+        bloomToggle.isOn = Convert.ToBoolean(PlayerPrefs.GetInt("Bloom Setting", 1));
+        qualityDropDown.value = PlayerPrefs.GetInt("Quality Setting", 2);
+
+        qualityDropDown.value = PlayerPrefs.GetInt("Quality Setting", 2);
+        qualityDropDown.RefreshShownValue();
+
+        frameLimitDropDown.value = PlayerPrefs.GetInt("Frame Rate Limit Setting", 0);
+        frameLimitDropDown.RefreshShownValue();
+
+        windowModeDropDown.value = PlayerPrefs.GetInt("Window Mode Setting", 0);
+        windowModeDropDown.RefreshShownValue();
+
+        resolutionScaleSlider.value = PlayerPrefs.GetFloat("Resolution Scale Setting", 1);
+
+        int indexVal = PlayerPrefs.GetInt("Resolution Setting", resolutionDropDown.value);
+        resolutionDropDown.SetValueWithoutNotify(indexVal);
+        resolutionDropDown.RefreshShownValue();
+        ResolutionValueChangeWithoutNotify(indexVal);
+    }
+
+    public void OnSettingsClose()
+    {
+        windowModeDropDown.value = PlayerPrefs.GetInt("Window Mode Setting", 0);
+        windowModeDropDown.RefreshShownValue();
+
+        resolutionScaleSlider.value = PlayerPrefs.GetFloat("Resolution Scale Setting", 1);
+
+        int indexVal = PlayerPrefs.GetInt("Resolution Setting", resolutionDropDown.value);
+        resolutionDropDown.SetValueWithoutNotify(indexVal);
+        resolutionDropDown.RefreshShownValue();
+        ResolutionValueChangeWithoutNotify(indexVal);
+    }
+
 
     public void OnBloomToggle(bool isOn)
     {
@@ -98,49 +169,34 @@ public class GraphicsSettings : MonoBehaviour
         switch(val)
         {
             case 0:
-                Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+                _fullScreenModeChosen = FullScreenMode.ExclusiveFullScreen;
                 break;
 
             case 1:
-                Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+                _fullScreenModeChosen = FullScreenMode.FullScreenWindow;
                 break;
 
             case 2:
-                Screen.fullScreenMode = FullScreenMode.MaximizedWindow;
+                _fullScreenModeChosen = FullScreenMode.MaximizedWindow;
                 break;
             
             case 3:
-                Screen.fullScreenMode = FullScreenMode.Windowed;
+                _fullScreenModeChosen = FullScreenMode.Windowed;
                 break;
         }
 
-        if(Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
-        {
-            resolutionCanvasGroup.DOFade(0.2f, 0.5f).SetUpdate(true);
-            resolutionCanvasGroup.interactable = false;
-            resolutionCanvasGroup.blocksRaycasts = false;
-        }
-        else
-        {
-            resolutionCanvasGroup.DOFade(1, 0.5f).SetUpdate(true);
-            resolutionCanvasGroup.interactable = true;
-            resolutionCanvasGroup.blocksRaycasts = true;
-        }
-
-        PlayerPrefs.SetInt("Window Mode Setting", val);
+        _fullScreenModeChosenInt = val;
         settingsMenu.RotateCogWheel();
     }
 
     public void OnResolutionScaleValueChange(float val)
     {
-        int newWidth = (int)(Screen.currentResolution.width * val);
-        int newHeight = (int)(Screen.currentResolution.height * val);
+        _resScaleVal = val;
+        _newWidth = (int)(Screen.currentResolution.width * val);
+        _newHeight = (int)(Screen.currentResolution.height * val);
 
         resolutionScaleDisplay.text = val.ToString("F1");
-
-        Screen.SetResolution(newWidth, newHeight, Screen.fullScreen);
-
-        PlayerPrefs.SetFloat("Resolution Scale Setting", val);
+        
         settingsMenu.RotateCogWheel();
     }
 

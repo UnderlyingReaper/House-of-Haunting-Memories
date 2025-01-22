@@ -36,18 +36,25 @@ public class TeleportBehaviour : MonoBehaviour, IDoorBehaviour
         _fadeCanvas.DOFade(1, fadeDuration);
 
         PlaySound(door.audioSource, openClip);
-        Sequence _sequence = DOTween.Sequence()
-        .Append(door.doorHandle.DORotate(new Vector3(0, 0, 30), 0.5f))
-        .Append(door.mainDoor.DOScaleX(0, fadeDuration*2));
+
+        Sequence _sequence = DOTween.Sequence();
+        if(door.doorHandle != null)
+        {
+            _sequence.Append(door.doorHandle.DORotate(new Vector3(0, 0, 30), 0.5f))
+            .Append(door.mainDoor.DOScaleX(0, fadeDuration*2));
+        }
 
         yield return new WaitForSeconds(fadeDuration);
         _player.transform.position = teleportPoint.position;
 
         yield return new WaitForSeconds(delay);
 
-        _sequence?.Kill();
-        door.doorHandle.rotation = Quaternion.Euler(Vector3.zero);
-        door.mainDoor.localScale = Vector3.one;
+        if(door.doorHandle != null)
+        {
+            _sequence?.Kill();
+            door.doorHandle.rotation = Quaternion.Euler(Vector3.zero);
+            door.mainDoor.localScale = Vector3.one;
+        }
 
         _fadeCanvas.DOFade(0, fadeDuration);
         GameplayInputManager.Instance.enabled = true;

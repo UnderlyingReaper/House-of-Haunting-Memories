@@ -26,6 +26,14 @@ public class SoundSettings : MonoBehaviour
         musicVolSlider.value = 100;
     }
 
+    public void LoadValues()
+    {
+        // Sound Settings
+        masterVolSlider.value = PlayerPrefs.GetInt("MasterVol", 100);
+        sfxVolSlider.value = PlayerPrefs.GetInt("SFXVol", 100);
+        musicVolSlider.value = PlayerPrefs.GetInt("MusicVol", 100);
+    }
+
     public void OnMasterVolChange(float val)
     {
         // Convert slider value from 0-100 to 0-1 range
