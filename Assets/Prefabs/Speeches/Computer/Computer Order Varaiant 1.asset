@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Computer Order Varaiant 1
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I should buy some more stuff from the shop
+  text: I should buy some more things from the shop.
   time: 3

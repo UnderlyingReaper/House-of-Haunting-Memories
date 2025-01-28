@@ -10,6 +10,7 @@ public class CarCrashTrigger : MonoBehaviour
     [SerializeField] private float carSpeed;
     [SerializeField] private AudioSource honkAudioSource;
     [SerializeField] private AudioSource carDriveAudioSource;
+    [SerializeField] private AudioSource rain, fire;
 
     [Header("Clips")]
     [SerializeField] private AudioClip bassHitClip;
@@ -51,10 +52,19 @@ public class CarCrashTrigger : MonoBehaviour
 
             honkAudioSource.Stop();
             carDriveAudioSource.Stop();
+
+            rain.DOFade(0, 4);
+            fire.DOFade(0, 4);
             houseMissingTrigger.heavyBreathingSource.DOFade(0, 1);
             houseMissingTrigger.heartBeatingSource.DOFade(0, 1);
         })
         .AppendInterval(6)
-        .AppendCallback(() => SceneManager.LoadScene(sceneName));
+        .AppendCallback(SwitchScene);
+    }
+
+    private void SwitchScene()
+    {
+        if(SceneUtility.GetBuildIndexByScenePath(sceneName) != -1) SceneManager.LoadScene(sceneName);
+        else SceneManager.LoadScene("Credits");
     }
 }

@@ -8,6 +8,7 @@ public class RemoveHouseTrigger : MonoBehaviour
 {
     [SerializeField] private List<GameObject> enableGameObjectList;
     [SerializeField] private List<GameObject> disableGameObjectList;
+    [SerializeField] private AudioSource rain, fire;
 
     [SerializeField] private float initialDelay;
     [SerializeField] private float delay = 0;
@@ -28,21 +29,33 @@ public class RemoveHouseTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(!enabled) return;
-        if(other.tag == "Player")
+        if(other.tag == "Player") StartCoroutine(StartTrigger());
+    }
+
+    private IEnumerator StartTrigger()
+    {
+        foreach(GameObject gameObject in enableGameObjectList)
         {
-            foreach(GameObject gameObject in enableGameObjectList)
-            {
-                gameObject.SetActive(true);
-            }
-
-            foreach(GameObject gameObject in disableGameObjectList)
-            {
-                gameObject.SetActive(false);
-            }
-
-            StartCoroutine(ChangeConfiner());
-            enabled = false;
+            gameObject.SetActive(true);
+            yield return new WaitForEndOfFrame();
         }
+
+        foreach(GameObject gameObject in disableGameObjectList)
+        {
+            gameObject.SetActive(false);
+            yield return new WaitForEndOfFrame();
+        }
+
+        StartCoroutine(ChangeConfiner());
+        enabled = false;
+
+        float _orgRainVol = rain.volume;
+        rain.volume = 0;
+        rain.DOFade(_orgRainVol, 3);
+
+        float _orgFireVol = fire.volume;
+        fire.volume = 0;
+        fire.DOFade(_orgFireVol, 3);
     }
 
     private IEnumerator ChangeConfiner()

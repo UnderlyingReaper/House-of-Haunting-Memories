@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day0 Objective 1 Hint
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I should start putting these boxes inside so I can eat some food and relax.
+  text: I should start bringing these boxes inside so I can eat and relax.
   time: 3

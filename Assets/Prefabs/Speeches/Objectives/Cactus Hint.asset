@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cactus Hint
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I cant stop myself anymore.
+  text: I can't stop myself anymore.
   time: 2.5

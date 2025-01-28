@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Flower 2
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: These roses remind me of her.
+  text: These roses remind me of her... I wish they didn't.
   time: 3

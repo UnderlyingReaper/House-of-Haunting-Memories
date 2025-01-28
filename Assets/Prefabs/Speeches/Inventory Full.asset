@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Inventory Full
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I can't grab more stuff.
+  text: I can't carry any more stuff.
   time: 2

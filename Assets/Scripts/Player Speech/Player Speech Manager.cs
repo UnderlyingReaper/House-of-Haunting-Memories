@@ -31,6 +31,7 @@ public class PlayerSpeechManager : MonoBehaviour
                                 .AppendCallback(() => { displayText.text = text;} )
                                 .Append(displayText.DOFade(1, 1))
                                 .AppendInterval(time)
-                                .Append(displayText.DOFade(0, 1));
+                                .Append(displayText.DOFade(0, 1))
+                                .SetUpdate(true);
     }
 }

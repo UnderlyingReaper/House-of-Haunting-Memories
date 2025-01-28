@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Flower 1
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Sophia loved the smell of roses.
+  text: "Sophia loved the smell of roses. It\u2019s hard to forget."
   time: 3

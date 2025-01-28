@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Computer Order Hint Varaiant 1
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Lets see whats on the computer today.
+  text: Let's see what's on the computer today.
   time: 3

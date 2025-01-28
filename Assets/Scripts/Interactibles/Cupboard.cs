@@ -59,16 +59,7 @@ public class Cupboard : MonoBehaviour, IInteractible, ISpecialInteraction
             CheckPlayer();
             StartCoroutine(Interaction());
         }
-        else if(_isOpen)
-        {
-            DOTween.Kill(_currSequence);
-            _currSequence = DOTween.Sequence()
-            .Append(doorR.DOScaleX(1, 1))
-            .Join(doorL.DOScaleX(1, 1))
-            .InsertCallback(0.9f, () => audioSource.PlayOneShot(cupboardDoorCloseClip));
-            
-            _isOpen = false;
-        }
+        else if(_isOpen) Close();
         else
         {
             DOTween.Kill(_currSequence);
@@ -90,6 +81,16 @@ public class Cupboard : MonoBehaviour, IInteractible, ISpecialInteraction
         return priority;
     }
 
+    public void Close()
+    {
+        DOTween.Kill(_currSequence);
+        _currSequence = DOTween.Sequence()
+        .Append(doorR.DOScaleX(1, 1))
+        .Join(doorL.DOScaleX(1, 1))
+        .InsertCallback(0.9f, () => audioSource.PlayOneShot(cupboardDoorCloseClip));
+            
+        _isOpen = false;
+    }
 
     void CheckPlayer()
     {

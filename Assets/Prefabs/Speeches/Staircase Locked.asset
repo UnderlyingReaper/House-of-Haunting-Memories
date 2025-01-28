@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Staircase Locked
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I dont want to go down there.
-  time: 1
+  text: I don't want to go down there.
+  time: 2

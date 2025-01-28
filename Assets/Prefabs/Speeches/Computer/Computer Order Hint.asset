@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Computer Order Hint
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I should open the shop on my computer.
+  text: I should check the shop through my computer.
   time: 2

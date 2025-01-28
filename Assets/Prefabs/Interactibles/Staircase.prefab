@@ -207,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 97
   text: Go Down
+  doorHandle: {fileID: 0}
+  mainDoor: {fileID: 0}
   additionalBehaviours:
   - {fileID: 3469862663341657192}
   lockModeMono: {fileID: 7048575255733332154}

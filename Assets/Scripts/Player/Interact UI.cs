@@ -23,11 +23,11 @@ public class InteractUI : MonoBehaviour
     private void DisplayText(string desiredText)
     {
         _textTMP.text = desiredText;
-        _image?.DOFade(1, 1);
+        _image.DOFade(1, 1);
     }
 
     private void HideText()
     {
-        _image?.DOFade(0, 1);
+        _image.DOFade(0, 1);
     }
 }

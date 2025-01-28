@@ -15,7 +15,6 @@ public class GraphicsSettings : MonoBehaviour
     public TMP_Dropdown qualityDropDown;
     public TMP_Dropdown frameLimitDropDown;
     public TMP_Dropdown windowModeDropDown;
-    public Slider resolutionScaleSlider;
     public TextMeshProUGUI resolutionScaleDisplay;
     public TMP_Dropdown resolutionDropDown;
     public CanvasGroup resolutionCanvasGroup;
@@ -36,9 +35,6 @@ public class GraphicsSettings : MonoBehaviour
     private FullScreenMode _fullScreenModeChosen;
     private int _fullScreenModeChosenInt;
 
-    private int _newWidth, _newHeight;
-    private float _resScaleVal;
-
 
 
 
@@ -52,8 +48,6 @@ public class GraphicsSettings : MonoBehaviour
 
         windowModeDropDown.value = 0;
         windowModeDropDown.RefreshShownValue();
-
-        resolutionScaleSlider.value = 1;
 
         resolutionDropDown.value = orgResolutionIndex;
         resolutionDropDown.RefreshShownValue();
@@ -76,11 +70,6 @@ public class GraphicsSettings : MonoBehaviour
         }
         Screen.fullScreenMode = _fullScreenModeChosen;
         PlayerPrefs.SetInt("Window Mode Setting", _fullScreenModeChosenInt);
-
-
-        // Resoltion Scale Slider
-        Screen.SetResolution(_newWidth, _newHeight, Screen.fullScreen);
-        PlayerPrefs.SetFloat("Resolution Scale Setting", _resScaleVal);
     }
 
     public void LoadValues()
@@ -100,8 +89,6 @@ public class GraphicsSettings : MonoBehaviour
         windowModeDropDown.value = PlayerPrefs.GetInt("Window Mode Setting", 0);
         windowModeDropDown.RefreshShownValue();
 
-        resolutionScaleSlider.value = PlayerPrefs.GetFloat("Resolution Scale Setting", 1);
-
         int indexVal = PlayerPrefs.GetInt("Resolution Setting", resolutionDropDown.value);
         resolutionDropDown.SetValueWithoutNotify(indexVal);
         resolutionDropDown.RefreshShownValue();
@@ -112,8 +99,6 @@ public class GraphicsSettings : MonoBehaviour
     {
         windowModeDropDown.value = PlayerPrefs.GetInt("Window Mode Setting", 0);
         windowModeDropDown.RefreshShownValue();
-
-        resolutionScaleSlider.value = PlayerPrefs.GetFloat("Resolution Scale Setting", 1);
 
         int indexVal = PlayerPrefs.GetInt("Resolution Setting", resolutionDropDown.value);
         resolutionDropDown.SetValueWithoutNotify(indexVal);
@@ -186,17 +171,6 @@ public class GraphicsSettings : MonoBehaviour
         }
 
         _fullScreenModeChosenInt = val;
-        settingsMenu.RotateCogWheel();
-    }
-
-    public void OnResolutionScaleValueChange(float val)
-    {
-        _resScaleVal = val;
-        _newWidth = (int)(Screen.currentResolution.width * val);
-        _newHeight = (int)(Screen.currentResolution.height * val);
-
-        resolutionScaleDisplay.text = val.ToString("F1");
-        
         settingsMenu.RotateCogWheel();
     }
 

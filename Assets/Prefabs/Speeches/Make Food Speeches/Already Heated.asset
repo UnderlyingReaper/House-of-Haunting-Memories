@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Already Heated
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I dont want to overheat this delicious meal.
+  text: I don't want to overheat this delicious meal.
   time: 3

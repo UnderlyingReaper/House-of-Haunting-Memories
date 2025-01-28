@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Save Sophia 4
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: "I\u2019m sorry... I\u2019m so sorry. I should\u2019ve been there. I should\u2019ve
+  text: "I\u2019m sorry... I\u2019m so sorry. I should've been there. I should've
     saved you..."
   time: 4

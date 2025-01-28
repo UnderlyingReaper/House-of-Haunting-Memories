@@ -9,6 +9,7 @@ public class Door : MonoBehaviour, IInteractible
     [SerializeField] private string text = "Interact";
 
     [Space(20)]
+    public AudioSource audioSource;
     public Transform doorHandle;
     public Transform mainDoor;
 
@@ -20,7 +21,6 @@ public class Door : MonoBehaviour, IInteractible
     private IDoorBehaviour _doorBehaviourInterface;
     private ILockable _lock;
     private List<IDoorBehaviour> _additonalBehavioursInterface;
-    [HideInInspector] public AudioSource audioSource;
     public Action OnDoorInteract;
 
     private void Awake()

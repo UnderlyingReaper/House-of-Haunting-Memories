@@ -41,8 +41,14 @@ public class Interact : MonoBehaviour
     }
     void Update()
     {
-        CheckForInteractible();
+        if(!controls.enabled)
+        {
+            OnInteractExit?.Invoke();
+            return;
+        }
+
         CheckInteractibleChange();
+        CheckForInteractible();
     }
 
     void InteractStart(InputAction.CallbackContext context)

@@ -15073,6 +15073,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6892423519363176949, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771741197666579909, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387271661117265265, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524882243772427334, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211669529967990333, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20434,6 +20454,22 @@ PrefabInstance:
     - target: {fileID: -7552582706839291426, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771741197666579909, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387271661117265265, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524882243772427334, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211669529967990333, guid: 2938ed91e7b0a704ca582702f0eb768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

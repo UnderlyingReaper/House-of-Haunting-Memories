@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day3 Use PC
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Okay lets just go use the computer, that should calm me down.
+  text: Okay, let's just go use the computer. That should calm me down.
   time: 3.5

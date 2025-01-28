@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Computer Order
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I should order some stuff from the shop today through my computer.
+  text: I should order some things from the shop today through my computer.
   time: 4

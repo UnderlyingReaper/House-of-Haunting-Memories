@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day0 Objective 3 Hint
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I should relax and watch the television.
+  text: I should relax and watch television.
   time: 4

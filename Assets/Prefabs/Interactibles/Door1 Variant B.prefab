@@ -52,6 +52,7 @@ MonoBehaviour:
   priority: 1000
   text: Interact
   doorHandle: {fileID: 9199707449265505700}
+  mainDoor: {fileID: 0}
   additionalBehaviours: []
   lockModeMono: {fileID: 0}
   doorBehaviour: {fileID: 5270721871903800299}

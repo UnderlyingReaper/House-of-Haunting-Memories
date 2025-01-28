@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day0 Objective 5
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I dont feel safe.
+  text: I don't feel safe.
   time: 2

@@ -3,6 +3,7 @@ using UnityEngine;
 public class SimpleLockBehaviour : MonoBehaviour, ILockable
 {
     [SerializeField] bool isLocked;
+    [SerializeField] AudioClip unlockSound;
     [SerializeField] InventoryItem keyItem;
     [SerializeField] MonoBehaviour playerSpeakMono;
 
@@ -30,6 +31,8 @@ public class SimpleLockBehaviour : MonoBehaviour, ILockable
 
         isLocked = false;
         InventoryManager.Instance.RemoveItem(keyItem);
+        GetComponent<AudioSource>().PlayOneShot(unlockSound);
+
         _playerSpeak?.SpeakPlayer(IPlayerSpeak.SpeechType.Hint);
     }
 }

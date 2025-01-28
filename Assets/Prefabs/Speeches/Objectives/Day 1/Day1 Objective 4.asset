@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day1 Objective 4
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Looks like my stuff has arrived, Lets bring them inside.
+  text: Looks like my stuff has arrived. Let's bring it inside.
   time: 4

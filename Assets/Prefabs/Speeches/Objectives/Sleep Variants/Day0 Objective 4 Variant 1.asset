@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day0 Objective 4 Variant 1
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Everythings fine, I should go back to my bed and sleep now.
+  text: Everything's fine. I should go back to bed and sleep now.
   time: 3

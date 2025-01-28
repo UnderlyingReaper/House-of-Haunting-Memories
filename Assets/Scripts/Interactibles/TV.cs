@@ -53,7 +53,7 @@ public class TV : MonoBehaviour, IInteractible, ISpecialInteraction
         _audioSource?.Play();
         _isOn = true;
     }
-    private void TurnOffTV()
+    public void TurnOffTV()
     {
         noise.SetActive(false);
         _audioSource?.Stop();

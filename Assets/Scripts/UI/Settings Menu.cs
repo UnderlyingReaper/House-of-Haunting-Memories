@@ -63,7 +63,6 @@ public class SettingsMenu : MonoBehaviour
         graphicsSettings.qualityDropDown.onValueChanged.AddListener(graphicsSettings.OnQualityValueChange);
         graphicsSettings.frameLimitDropDown.onValueChanged.AddListener(graphicsSettings.OnFramesLimitValueChange);
         graphicsSettings.windowModeDropDown.onValueChanged.AddListener(graphicsSettings.OnWindowModeValueChange);
-        graphicsSettings.resolutionScaleSlider.onValueChanged.AddListener(graphicsSettings.OnResolutionScaleValueChange);
         graphicsSettings.resolutionDropDown.onValueChanged.AddListener(graphicsSettings.OnResolutionValueChange);
 
         // Sound Settings

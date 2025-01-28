@@ -17,12 +17,6 @@ public class UpdateDisplayUI : MonoBehaviour
 
     private void Awake()
     {
-        if(PlayerPrefs.GetString("Game Version") != Application.version)
-        {
-            PlayerPrefs.SetString("Game Version", Application.version);
-            mainMenu.OnSceneLoaded += DisplayUpdate;
-        }
-
         mainMenu.OnUpdateInfoBtnClicked += DisplayUpdate;
 
         contentCanvas.alpha = 0;

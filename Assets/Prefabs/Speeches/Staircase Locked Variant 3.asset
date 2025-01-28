@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Staircase Locked Variant 3
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: No... please....
+  text: No... please.
   time: 3

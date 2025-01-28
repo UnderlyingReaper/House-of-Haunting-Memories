@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Day3 Objective 3
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: That was such a bad dream. I dont think i will be able to sleep again, lets
+  text: That was such a bad dream. I don't think I'll be able to sleep again. Let's
     just watch some television.
   time: 4

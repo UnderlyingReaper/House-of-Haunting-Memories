@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cactus Main
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: A cactus, nothing much.
+  text: A cactus. Nothing much.
   time: 2.5

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Flower 3
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I should stop looking at these roses
+  text: I shouldn't look at these roses... they remind me too much of her, I need
+    to forget.
   time: 3

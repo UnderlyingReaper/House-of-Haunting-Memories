@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dont Heat Finger
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I dont plan on heating my finger.
+  text: I don't plan on heating my finger.
   time: 3

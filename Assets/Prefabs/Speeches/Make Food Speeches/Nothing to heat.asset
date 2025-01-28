@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Nothing to heat
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I dont have anything to put in the microwave.
+  text: I don't have anything to put in the microwave.
   time: 3

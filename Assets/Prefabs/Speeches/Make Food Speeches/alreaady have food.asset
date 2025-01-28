@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: alreaady have food
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I already took the food out, I should microwave it now.
+  text: I already took the food out. I should microwave it now.
   time: 4

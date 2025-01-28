@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day0 Objective 4
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I feel very tired, I should go to bed and sleep. Its gonna get dark soon.
+  text: I feel very tired. I should go to bed and sleep. It's going to get dark soon.
   time: 3

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day1 Objective 2
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Im starving, lets make some food in the kitchen.
+  text: I'm starving. Let's make some food in the kitchen.
   time: 4

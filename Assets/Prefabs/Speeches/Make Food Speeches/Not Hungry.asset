@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Not Hungry
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I dont feel like eating right now
+  text: I don't feel like eating right now.
   time: 3

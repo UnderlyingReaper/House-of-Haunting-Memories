@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day3 Get Cactus Key Hint
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I think i kept it near the cactus
+  text: I think I kept it near the cactus.
   time: 2.5

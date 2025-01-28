@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Its Heating
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Have some patience, it's microwaving.
+  text: Have some patience, it's in the microwave.
   time: 3
