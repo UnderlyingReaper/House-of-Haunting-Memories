@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -40,7 +41,12 @@ public class SettingsMenu : MonoBehaviour
         };
 
         // Resolution Setting
-        graphicsSettings.resolutions = Screen.resolutions;
+        var uniqueResolutions = Screen.resolutions
+        .GroupBy(r => new { r.width, r.height })
+        .Select(g => g.First())
+        .ToArray();
+
+        graphicsSettings.resolutions = uniqueResolutions;
         graphicsSettings.resolutionDropDown.ClearOptions();
 
         List<string> options = new();

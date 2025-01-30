@@ -17,7 +17,6 @@ public class GraphicsSettings : MonoBehaviour
     public TMP_Dropdown windowModeDropDown;
     public TextMeshProUGUI resolutionScaleDisplay;
     public TMP_Dropdown resolutionDropDown;
-    public CanvasGroup resolutionCanvasGroup;
     public GameObject confirmResolutionMenu;
     public TextMeshProUGUI countDownTMP;
 
@@ -56,18 +55,6 @@ public class GraphicsSettings : MonoBehaviour
     public void ApplyBtn()
     {
         // Fullscreen Mode
-        if(Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
-        {
-            resolutionCanvasGroup.DOFade(0.2f, 0.5f).SetUpdate(true);
-            resolutionCanvasGroup.interactable = false;
-            resolutionCanvasGroup.blocksRaycasts = false;
-        }
-        else
-        {
-            resolutionCanvasGroup.DOFade(1, 0.5f).SetUpdate(true);
-            resolutionCanvasGroup.interactable = true;
-            resolutionCanvasGroup.blocksRaycasts = true;
-        }
         Screen.fullScreenMode = _fullScreenModeChosen;
         PlayerPrefs.SetInt("Window Mode Setting", _fullScreenModeChosenInt);
     }
