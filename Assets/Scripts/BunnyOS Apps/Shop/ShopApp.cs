@@ -102,7 +102,7 @@ public class ShopApp : MonoBehaviour
 
     public void OnSubmit()
     {
-        if(SyncDataManager.Instance.HasRope)
+        if(SyncDataManager.Instance.HasRope && inputField.text.ToLower() == itemCode.ToLower())
         {
             DOTween.Sequence()
             .AppendCallback(() => inputField.text = "Already Ordered!")

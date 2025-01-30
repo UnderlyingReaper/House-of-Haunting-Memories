@@ -15,7 +15,7 @@ public class AboutPC : MonoBehaviour
     {
         deviceName.text += SystemInfo.deviceName;
         processorName.text += SystemInfo.processorType;
-        ramName.text += (Mathf.FloorToInt(SystemInfo.systemMemorySize) / 1024).ToString() + "GB";
+        ramName.text += ((Mathf.FloorToInt(SystemInfo.systemMemorySize) / 1024) + 1).ToString() + "GB";
         deviceID.text += SystemInfo.deviceUniqueIdentifier.ToString();
     }
 }

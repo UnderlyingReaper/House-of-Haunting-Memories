@@ -47,8 +47,8 @@ public class Interact : MonoBehaviour
             return;
         }
 
-        CheckInteractibleChange();
         CheckForInteractible();
+        CheckInteractibleChange();
     }
 
     void InteractStart(InputAction.CallbackContext context)

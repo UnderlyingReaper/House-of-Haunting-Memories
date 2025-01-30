@@ -430,7 +430,7 @@ MonoBehaviour:
   noItemsTxt: {fileID: 348388330167115884}
   defaultStyle: {fileID: 7957983107947495300, guid: 8e6ee7180442e224398d51c47cf0cc1e, type: 3}
   itemSpawnersList: []
-  itemCode: 1295
+  itemCode: rope
   menu: {fileID: 6581189892284999408}
   inputField: {fileID: 4414268554686971371}
 --- !u!114 &2826973150944659335

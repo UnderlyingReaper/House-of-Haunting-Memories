@@ -51,11 +51,9 @@ public class MainMenu : MonoBehaviour
 
         foreach(AudioSource source in audioSourceList) source.Play();
         SetVolume(0.12f, 4);
-
-        fade.DOFade(0, 3).OnComplete(() => OnSceneLoaded?.Invoke());
     }
     private void Start()
-    {
+    {   
         GameplayInputManager.Instance.playerControls.UI.Enable();
         GameplayInputManager.Instance.enabled = false;
 
@@ -66,6 +64,7 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+    private void OnEnable() => fade.DOFade(0, 3).OnComplete(() => OnSceneLoaded?.Invoke());
 
     private void Update()
     {

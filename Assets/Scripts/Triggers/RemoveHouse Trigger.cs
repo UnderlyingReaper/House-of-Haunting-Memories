@@ -34,17 +34,17 @@ public class RemoveHouseTrigger : MonoBehaviour
 
     private IEnumerator StartTrigger()
     {
-        foreach(GameObject gameObject in enableGameObjectList)
-        {
-            gameObject.SetActive(true);
-            yield return new WaitForEndOfFrame();
-        }
-
         foreach(GameObject gameObject in disableGameObjectList)
         {
             gameObject.SetActive(false);
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(0.5f);
         }
+
+        foreach(GameObject gameObject in enableGameObjectList)
+        {
+            gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+        }        
 
         StartCoroutine(ChangeConfiner());
         enabled = false;

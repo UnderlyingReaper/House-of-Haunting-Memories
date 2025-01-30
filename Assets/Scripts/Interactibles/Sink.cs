@@ -49,7 +49,10 @@ public class Sink : MonoBehaviour, IInteractible
             waterVfx.Stop();
             _isOn = false;
 
+            
             _audioSource.PlayOneShot(stateChangeSound, _orgVol);
+
+            _audioSource.DOKill();
             _audioSource.DOFade(0, 0.5f).OnComplete(() => _audioSource.Stop());
         }
         else
@@ -58,6 +61,8 @@ public class Sink : MonoBehaviour, IInteractible
             _isOn = true;
 
             _audioSource.PlayOneShot(stateChangeSound, _orgVol);
+
+            _audioSource.DOKill();
             _audioSource.Play();
             _audioSource.DOFade(_orgVol, 0.5f);
         }

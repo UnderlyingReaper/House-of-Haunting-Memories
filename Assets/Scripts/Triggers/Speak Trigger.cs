@@ -4,7 +4,7 @@ public class SpeakTrigger : MonoBehaviour
 {
     private IPlayerSpeak _playerSpeak;
 
-    private void Awake() => _playerSpeak = GetComponent<IPlayerSpeak>();
+    private void Start() => _playerSpeak = GetComponent<IPlayerSpeak>();
     
     private void OnTriggerEnter2D(Collider2D other)
     {

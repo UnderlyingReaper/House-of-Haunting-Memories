@@ -16,14 +16,14 @@ public class AppWindow : MonoBehaviour
 
     public void CloseWindow()
     {
-        DOTween.Kill(rectTransform);
+        rectTransform.DOKill();
         rectTransform.pivot = new Vector2(0.5f, 0);
         rectTransform.DOScale(Vector2.zero, 0.15f).OnComplete(() => Destroy(gameObject));
     }
 
     public void MinimizeWindow()
     {
-        DOTween.Kill(rectTransform);
+        rectTransform.DOKill();
         rectTransform.pivot = new Vector2(0.5f, 0);
         rectTransform.DOScale(Vector2.zero, 0.15f);
         isMinimized = true;
@@ -31,9 +31,9 @@ public class AppWindow : MonoBehaviour
 
     public void OpenWindow()
     {
-        DOTween.Kill(rectTransform);
+        rectTransform.DOKill();
         rectTransform.pivot = new Vector2(0.5f, 0);
-        rectTransform.DOScale(Vector2.one, 0.15f).OnComplete(() => rectTransform.pivot = new Vector2(0.5f, 0.5f));
+        rectTransform.DOScale(Vector2.one, 0.15f).OnComplete(() => rectTransform.pivot = new Vector2(0.5f, 0.5f)).SetLink(gameObject);
         isMinimized = false;
     }
 }

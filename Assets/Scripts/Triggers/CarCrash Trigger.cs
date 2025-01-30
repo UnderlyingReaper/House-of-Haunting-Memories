@@ -23,7 +23,7 @@ public class CarCrashTrigger : MonoBehaviour
     
 
 
-    private void Awake()
+    private void Start()
     {
         car.OnTriggerEnter += OnCarHit;
 

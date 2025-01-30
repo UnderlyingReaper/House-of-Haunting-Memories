@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckShopItemCondition : MonoBehaviour, IObjectiveCondition
@@ -8,6 +8,7 @@ public class CheckShopItemCondition : MonoBehaviour, IObjectiveCondition
     private ShopApp _shopApp;
     private int _count;
     private bool _isConditionMet;
+    private List<ShopItemSpawner> _purchasableShopItems;
 
 
 
@@ -25,13 +26,20 @@ public class CheckShopItemCondition : MonoBehaviour, IObjectiveCondition
     {
         _shopApp = window.GetComponent<ShopApp>();
         _shopApp.OnInitializeComplete += SubscribeToItems;
+
+        
     }
 
     private void SubscribeToItems()
-    {           
+    {   _purchasableShopItems = new();
+
         foreach(ShopItemSpawner itemSpawner in _shopApp.itemSpawnersList)
         {
-            itemSpawner.OnPurchase += OnPurchaseItem;
+            if(!itemSpawner.isPurchased)
+            {
+                _purchasableShopItems.Add(itemSpawner);
+                itemSpawner.OnPurchase += OnPurchaseItem;
+            }
         }
     }
 
@@ -40,6 +48,6 @@ public class CheckShopItemCondition : MonoBehaviour, IObjectiveCondition
         _count++;
         spawner.OnPurchase -= OnPurchaseItem;
 
-        if(_count == _shopApp.itemSpawnersList.Count) _isConditionMet = true;
+        if(_count == _purchasableShopItems.Count) _isConditionMet = true;
     }
 }

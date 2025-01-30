@@ -20,7 +20,7 @@ public class CreditsMenu : MonoBehaviour
     private CanvasGroup creditsCanvas;
 
 
-    private void Awake()
+    private void OnEnable()
     {
         creditsCanvas = creditsHolder.GetComponent<CanvasGroup>();
 

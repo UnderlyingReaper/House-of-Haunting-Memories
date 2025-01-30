@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47afaaf53751fac4d8feb1aab25b344e, type: 3}
-  m_Name: Staircase Locked Variant 2
+  m_Name: Day2 CheckCupboards
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: Why don't you just forget about it, alright?!
-  time: 3
+  text: How did the TV turn on?
+  time: 2
