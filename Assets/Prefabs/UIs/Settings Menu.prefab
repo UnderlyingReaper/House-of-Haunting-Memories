@@ -8156,7 +8156,6 @@ MonoBehaviour:
   windowModeDropDown: {fileID: 7160368963533431869}
   resolutionScaleDisplay: {fileID: 0}
   resolutionDropDown: {fileID: 8016258646548174114}
-  resolutionCanvasGroup: {fileID: 6526474082373834511}
   confirmResolutionMenu: {fileID: 2668276023094933525}
   countDownTMP: {fileID: 4671181049487079062}
   orgResolutionIndex: 0
