@@ -31,7 +31,7 @@ public class AnimationController : MonoBehaviour
     int _currBodyState;
     int _currLegState;
     float _lockedTill;
-    float _prevPosMagnitude;
+    float _distance;
     bool _override = false;
 
 
@@ -47,12 +47,12 @@ public class AnimationController : MonoBehaviour
     {
         _prevPos = transform.position;
     }
+
     void Update()
     {
         if(_override) return;
 
-        Vector3 dir = transform.position - _prevPos;
-        _prevPosMagnitude = dir.magnitude;
+        _distance = Mathf.Abs(transform.position.x - _prevPos.x);
 
 
         int bodyState = GetBodyState();
@@ -78,14 +78,14 @@ public class AnimationController : MonoBehaviour
 
         // Priorities
         if(isGrabbingBox) return bodyGrabBoxClip;
-        else if(_prevPosMagnitude >= walkThreshold)return bodyWalkClip;
+        else if(_distance >= walkThreshold)return bodyWalkClip;
         else return bodyIdleClip;
     }
     int GetLegState() {
         if (Time.time < _lockedTill) return _currLegState;
 
         // Priorities
-        if (_prevPosMagnitude >= walkThreshold) return legWalkClip;
+        if (_distance >= walkThreshold) return legWalkClip;
         else return legIdleClip;
     }
 

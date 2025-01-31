@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -59,9 +58,8 @@ public class PlayerMovement : MonoBehaviour
         #endregion
 
         #region Slope Handeling
-        RaycastHit2D hit = Physics2D.Raycast(checkPoint.position, Vector3.down, 1, groundMask);
-        // Cast a ray downward from the player's feet
-        if (hit)
+        RaycastHit2D hit = Physics2D.Raycast(checkPoint.position, Vector3.down, 1, groundMask); // Cast a ray downward from the player's feet
+        if (hit) 
         {
             Vector3 surfaceNormal = hit.normal;
             float slopeAngle = Vector3.Angle(surfaceNormal, Vector3.up);
@@ -69,6 +67,9 @@ public class PlayerMovement : MonoBehaviour
             if(slopeAngle > 0 && isGrounded && horizontalInput == 0) _rb.gravityScale = 0;
             else _rb.gravityScale = 1;
         }
+
+        if(_rb.gravityScale == 0 && _rb.linearVelocityY > 0)
+            _rb.linearVelocityY = 0;
         #endregion
 
         if((horizontalInput > 0 && !isFacingRight) || (horizontalInput < 0 && isFacingRight)) Flip();
@@ -80,5 +81,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(_rb == null) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)_rb.linearVelocity);   
     }
 }
