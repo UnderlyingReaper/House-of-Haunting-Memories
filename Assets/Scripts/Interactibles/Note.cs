@@ -29,9 +29,8 @@ public class Note : MonoBehaviour, IInteractible
         _audioSource = GetComponentInChildren<AudioSource>();
 
         _canvasGroup.alpha = 0;
-
-        ui.Back.performed += (InputAction.CallbackContext context) => Close();
     }
+    private void Start() => ui.Back.performed += (InputAction.CallbackContext context) => Close();
     private void OnEnable() => gameObject.SetActive(true);
     private void OnDisable() => gameObject.SetActive(false);
 
