@@ -89,6 +89,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartBtn()
     {
         fadeImg.DOFade(1, 1).SetUpdate(true).OnComplete(() => {
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         });
     }
@@ -107,6 +108,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenuBtn()
     {
         fadeImg.DOFade(1, 1).SetUpdate(true).OnComplete(() => {
+            Time.timeScale = 1;
             SceneManager.LoadScene(1);
         });
     }

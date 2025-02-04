@@ -1,0 +1,78 @@
+{
+    "name": "Dev Controls",
+    "maps": [
+        {
+            "name": "Dev Tools",
+            "id": "a522d827-fe46-41c6-917b-ea805cf0f974",
+            "actions": [
+                {
+                    "name": "Key Sequence",
+                    "type": "Button",
+                    "id": "d7a522c5-fff9-43e2-a57d-4a8d6e48a31c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0d8f5a6c-9808-4c7c-a6c7-b226bfac1f95",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Key Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1aa7878-736f-4b94-8e68-843557e461a7",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Key Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3dc61e9b-2a39-4d44-83f3-477961a0c25c",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Key Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c65139a-a574-4e14-a221-f863adc5855a",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Key Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e92b771e-a5d1-4b0c-a231-f8aada6303a2",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Key Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

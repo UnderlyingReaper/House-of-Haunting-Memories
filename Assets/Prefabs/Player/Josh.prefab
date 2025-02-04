@@ -472,7 +472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Body
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
       propertyPath: m_Layer
@@ -907,7 +907,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2789260775018922337, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
       insertIndex: 0
@@ -928,68 +929,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7444955991171961277}
-    - targetCorrespondingSourceObject: {fileID: -2789260775018922337, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7747809517361050548}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
---- !u!1 &1128409995654886686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2789260775018922337, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
-  m_PrefabInstance: {fileID: 6260677430983428993}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7747809517361050548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128409995654886686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_Priority: 0
-  m_ComponentVersion: 5
-  m_HasRenderer: 0
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_AlphaCutoff: 0.1
-  m_ApplyToSortingLayers: e90701ef000000002d1d7cb553f74be8
-  m_ShapePath:
-  - {x: -0.775, y: -0.24500036, z: 0}
-  - {x: -0.775, y: 0.24500036, z: 0}
-  - {x: 0.775, y: 0.24500036, z: 0}
-  - {x: 0.775, y: -0.24500036, z: 0}
-  m_ShapePathHash: 0
-  m_InstanceId: 0
-  m_ShadowShape2DComponent: {fileID: 6085360143414518339}
-  m_ShadowShape2DProvider:
-    rid: 2579712208424403058
-  m_ShadowCastingSource: 2
-  m_ShadowMesh:
-    m_Mesh: {fileID: 0}
-    m_LocalBounds:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0, y: 0, z: 0}
-    m_EdgeProcessing: 1
-    m_TrimEdge: -1
-    m_FlipX: 0
-    m_FlipY: 0
-    m_InitialTrim: 0.009
-  m_CastingOption: 1
-  m_PreviousTrimEdge: 0
-  m_PreviousEdgeProcessing: -1
-  m_PreviousShadowCastingSource: -1
-  m_PreviousShadowShape2DSource: {fileID: 0}
-  references:
-    version: 2
-    RefIds:
-    - rid: 2579712208424403058
-      type: {class: ShadowShape2DProvider_SpriteSkin, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data: 
 --- !u!4 &4741642764822213215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
@@ -1143,17 +1083,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6085360143414518339 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 185191005351864770, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}
-  m_PrefabInstance: {fileID: 6260677430983428993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128409995654886686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8407202991927527391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2471920254983572574, guid: a14b8a991b3db0a4796dac241aef89f7, type: 3}

@@ -1,10 +1,20 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Garbage : MonoBehaviour, IInteractible
 {
     [SerializeField] private int priority;
     [SerializeField] private string text;
+    [SerializeField] private AudioClip unzipClip;
 
+    private CanvasGroup _canvas;
+    private AudioSource _audioSource;
+
+    void Awake()
+    {
+        _audioSource = GetComponentInChildren<AudioSource>();
+        _canvas = GetComponentInChildren<CanvasGroup>();
+    }
 
     public int GetPriority()
     {
@@ -25,7 +35,11 @@ public class Garbage : MonoBehaviour, IInteractible
     public void InteractCancel(Transform interactorTransform) {}
     public void InteractPerform(Transform interactorTransform)
     {
+        if(!enabled) return;
 
+        enabled = false;
+        _canvas.DOFade(1, 2);
+        _audioSource.PlayOneShot(unzipClip);
     }
     public void InteractStart(Transform interactorTransform) {}
 }

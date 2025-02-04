@@ -51,12 +51,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1000
   text: Interact
+  audioSource: {fileID: 0}
   doorHandle: {fileID: 9199707449265505700}
   mainDoor: {fileID: 0}
   additionalBehaviours: []
   lockModeMono: {fileID: 0}
   doorBehaviour: {fileID: 5270721871903800299}
-  audioSource: {fileID: 0}
 --- !u!114 &5270721871903800299
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,6 +18,8 @@ public class PlayerSpeechManager : MonoBehaviour
 
     public void PlayPlayerSpeech(PlayerSpeechData playerSpeech)
     {
+        if(!enabled) return;
+        
         if(_currTextSequence != null) _currTextSequence.Kill();
         
         if(playerSpeech.clip != null) playerVoiceSource?.PlayOneShot(playerSpeech.clip);
