@@ -41,10 +41,12 @@ public class SettingsMenu : MonoBehaviour
         };
 
         // Resolution Setting
-        var uniqueResolutions = Screen.resolutions
-        .GroupBy(r => new { r.width, r.height })
-        .Select(g => g.First())
-        .ToArray();
+        Resolution[] uniqueResolutions = Screen.resolutions
+        .GroupBy(r => new { r.width, r.height }) // Group by width and height
+        .Select(g => g.First())                  // Select the first entry from each group
+        .OrderByDescending(r => r.width)         // Sort by width in descending order
+        .ThenByDescending(r => r.height)         // Then sort by height in descending order
+        .ToArray();                              // Convert the result back to an array
 
         graphicsSettings.resolutions = uniqueResolutions;
         graphicsSettings.resolutionDropDown.ClearOptions();
@@ -53,7 +55,7 @@ public class SettingsMenu : MonoBehaviour
         graphicsSettings.orgResolutionIndex = 0;
         for(int i = 0; i < graphicsSettings.resolutions.Length; i++)
         {
-            string option = graphicsSettings.resolutions[i].width + "x" + graphicsSettings.resolutions[i].height;
+            string option = $"{graphicsSettings.resolutions[i].width} x {graphicsSettings.resolutions[i].height}";
             options.Add(option);
 
             if(graphicsSettings.resolutions[i].width == Screen.currentResolution.width && graphicsSettings.resolutions[i].height == Screen.currentResolution.height)
