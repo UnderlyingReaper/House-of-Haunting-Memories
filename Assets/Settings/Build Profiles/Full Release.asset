@@ -33,6 +33,10 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Day 3.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/Day 4 Intro.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Day 4.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Credits.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
