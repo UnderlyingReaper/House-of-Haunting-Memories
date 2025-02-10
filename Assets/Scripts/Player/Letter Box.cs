@@ -25,6 +25,8 @@ public class LetterBox : MonoBehaviour
 
     void OnEnable()
     {
+        if(!gameObject.activeSelf) return;
+
         _currSequence?.Kill();
         _currSequence = DOTween.Sequence()
         .Append(top.DOAnchorPosY(-Mathf.Abs(top.anchoredPosition.y), transitionDuration))
@@ -33,6 +35,8 @@ public class LetterBox : MonoBehaviour
 
     void OnDisable()
     {
+        if(!gameObject.activeSelf) return;
+        
         _currSequence?.Kill();
         _currSequence = DOTween.Sequence()
         .Append(top.DOAnchorPosY(Mathf.Abs(top.anchoredPosition.y), transitionDuration))

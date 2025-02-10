@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CloseCupboardsInitialize : MonoBehaviour, IObjectiveInitialize
 {
-    [SerializeField] List<Cupboard> cupboardList;
+    [SerializeField] private List<Cupboard> cupboardList;
     public void Initialize()
     {
         foreach(Cupboard cupboard in cupboardList)

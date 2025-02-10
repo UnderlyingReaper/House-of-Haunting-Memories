@@ -1,12 +1,18 @@
 using DG.Tweening;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DevTools : MonoBehaviour
 {
-    [SerializeField] DevControls devControls;
+    public static DevTools instance;
+
+    public DevControls devControls;
     [SerializeField] RectTransform uiHolder;
+
+    [Header("Refrences")]
+    [SerializeField] private GameObject devCamera;
 
     [Header("Toggles")]
     [SerializeField] private Toggle hidePlayerToggle;
@@ -15,6 +21,12 @@ public class DevTools : MonoBehaviour
     [SerializeField] private Toggle hideInventoryToggle;
     [SerializeField] private Toggle hidePlayerLightToggle;
     [SerializeField] private Toggle stopTimeToggle;
+    [SerializeField] private Toggle hideLetterBoxToggle;
+    [SerializeField] private Toggle enableDevCameraToggle;
+
+    [Header("Sliders")]
+    [SerializeField] private Slider camSpeedSlider;
+    [SerializeField] private Slider camZoomSlider;
 
     private string keyCodeSequence = "HOHMD"; // The key sequence to activate the dev tool
     private string currentInput = ""; // Tracks the player's current input
@@ -22,20 +34,36 @@ public class DevTools : MonoBehaviour
     private GameObject _interactionPrompt;
     private GameObject _playerVoiceSubtitles;
     private CanvasGroup _inventoryHandler;
+    private GameObject _letterBoxHandler;
+    private SimpleCameraController _devCamController;
+    private CinemachineCamera _devCinemachine;
 
 
     private void Awake()
     {
-        devControls = new();
+        if(instance == null)
+        {
+            instance = this;
+
+            devControls = new();
+        }
+        else Destroy(gameObject);
     }
     private void Start()
     {
+        // Toggles
         hidePlayerToggle.onValueChanged.AddListener(HidePlayer);
         hideInteractionPromptToggle.onValueChanged.AddListener(HideInteractionPrompt);
         hidePlayerSubtitlesToggle.onValueChanged.AddListener(HidePlayerSubtitles);
         hideInventoryToggle.onValueChanged.AddListener(HideInventory);
         hidePlayerLightToggle.onValueChanged.AddListener(HidePlayerLight);
         stopTimeToggle.onValueChanged.AddListener(StopTime);
+        hideLetterBoxToggle.onValueChanged.AddListener(HideLetterBox);
+        enableDevCameraToggle.onValueChanged.AddListener(EnableDevCamera);
+
+        // Sliders
+        camSpeedSlider.onValueChanged.AddListener(CameraSpeedSlider);
+        camZoomSlider.onValueChanged.AddListener(CameraZoomSlider);
         
         devControls.DevTools.KeySequence.performed += OnSequenceKeyPressed;
     }
@@ -66,6 +94,8 @@ public class DevTools : MonoBehaviour
             currentInput = currentInput.Substring(1);
     }
 
+
+    #region Toggles
     private void HidePlayer(bool val)
     {
         if(_playerBody == null) _playerBody = GameObject.Find("Player Body");
@@ -126,6 +156,34 @@ public class DevTools : MonoBehaviour
         if(val) Time.timeScale = 0;
         else Time.timeScale = 1;
     }
+    private void HideLetterBox(bool val)
+    {
+        if(_letterBoxHandler == null) _letterBoxHandler = GameObject.Find("Letter Box");
+
+        _letterBoxHandler.SetActive(!val);
+    }
+    private void EnableDevCamera(bool val)
+    {
+        devCamera.SetActive(val);
+    }
+    #endregion
+
+
+
+    #region Sliders
+    private void CameraSpeedSlider(float val)
+    {
+        if(_devCamController == null) _devCamController = devCamera.GetComponent<SimpleCameraController>();
+        _devCamController.movementSpeed = val;
+    }
+    private void CameraZoomSlider(float val)
+    {
+        if (_devCinemachine == null) _devCinemachine = devCamera.GetComponent<CinemachineCamera>();
+        _devCinemachine.Lens.OrthographicSize = val;
+    }
+    #endregion
+
+
 
     public void CloseButton()
     {

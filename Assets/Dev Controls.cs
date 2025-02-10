@@ -35,6 +35,15 @@ public partial class @DevControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""4620b1a4-2dc4-48f9-bfdd-a15f13566398"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -92,6 +101,61 @@ public partial class @DevControls: IInputActionCollection2, IDisposable
                     ""action"": ""Key Sequence"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""814430d5-96d5-42d1-a248-b2a2b5d2e71c"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": ""NormalizeVector2"",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""61fd5b0b-3d31-4761-af73-0e2baec88db3"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""5d63ce9c-6746-488c-b7d8-cfdca7dbf19b"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a51bc4bb-3610-4d1b-a742-061bc8722c5c"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""4495839f-065a-4748-8d1b-5d19b0c7f095"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -101,6 +165,7 @@ public partial class @DevControls: IInputActionCollection2, IDisposable
         // Dev Tools
         m_DevTools = asset.FindActionMap("Dev Tools", throwIfNotFound: true);
         m_DevTools_KeySequence = m_DevTools.FindAction("Key Sequence", throwIfNotFound: true);
+        m_DevTools_Movement = m_DevTools.FindAction("Movement", throwIfNotFound: true);
     }
 
     ~@DevControls()
@@ -168,11 +233,13 @@ public partial class @DevControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_DevTools;
     private List<IDevToolsActions> m_DevToolsActionsCallbackInterfaces = new List<IDevToolsActions>();
     private readonly InputAction m_DevTools_KeySequence;
+    private readonly InputAction m_DevTools_Movement;
     public struct DevToolsActions
     {
         private @DevControls m_Wrapper;
         public DevToolsActions(@DevControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @KeySequence => m_Wrapper.m_DevTools_KeySequence;
+        public InputAction @Movement => m_Wrapper.m_DevTools_Movement;
         public InputActionMap Get() { return m_Wrapper.m_DevTools; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -185,6 +252,9 @@ public partial class @DevControls: IInputActionCollection2, IDisposable
             @KeySequence.started += instance.OnKeySequence;
             @KeySequence.performed += instance.OnKeySequence;
             @KeySequence.canceled += instance.OnKeySequence;
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
         }
 
         private void UnregisterCallbacks(IDevToolsActions instance)
@@ -192,6 +262,9 @@ public partial class @DevControls: IInputActionCollection2, IDisposable
             @KeySequence.started -= instance.OnKeySequence;
             @KeySequence.performed -= instance.OnKeySequence;
             @KeySequence.canceled -= instance.OnKeySequence;
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
         }
 
         public void RemoveCallbacks(IDevToolsActions instance)
@@ -212,5 +285,6 @@ public partial class @DevControls: IInputActionCollection2, IDisposable
     public interface IDevToolsActions
     {
         void OnKeySequence(InputAction.CallbackContext context);
+        void OnMovement(InputAction.CallbackContext context);
     }
 }
