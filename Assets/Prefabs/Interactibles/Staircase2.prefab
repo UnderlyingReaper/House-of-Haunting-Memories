@@ -273,13 +273,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 96
   text: Go Up
+  audioSource: {fileID: 0}
   doorHandle: {fileID: 0}
   mainDoor: {fileID: 0}
   additionalBehaviours:
   - {fileID: 5279670100887749401}
   lockModeMono: {fileID: 0}
   doorBehaviour: {fileID: 3566550930085800093}
-  audioSource: {fileID: 0}
 --- !u!114 &3566550930085800093
 MonoBehaviour:
   m_ObjectHideFlags: 0

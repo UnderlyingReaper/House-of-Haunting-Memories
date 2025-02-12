@@ -56,7 +56,6 @@ public class PackedBox : MonoBehaviour, IInteractible
     private IEnumerator GrabBox(Transform handPoint, Transform interactor)
     {
         GameplayInputManager.Instance.enabled = false;
-        StartCoroutine(AnimationController.Instance.GrabBoxOverride());
         AnimationController.Instance.isGrabbingBox = true;
         isGrabbed = true;
 
@@ -88,7 +87,6 @@ public class PackedBox : MonoBehaviour, IInteractible
     private IEnumerator DropBox()
     {
         GameplayInputManager.Instance.enabled = false;
-        StartCoroutine(AnimationController.Instance.DropBoxOverride());
         AnimationController.Instance.isGrabbingBox = false;
         isGrabbed = false;
 

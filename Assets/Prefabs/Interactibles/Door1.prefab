@@ -424,13 +424,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 999
   text: Enter
+  audioSource: {fileID: 0}
   doorHandle: {fileID: 6447212608750662993}
   mainDoor: {fileID: 2642009634471181148}
   additionalBehaviours:
   - {fileID: 6293852365820639152}
   lockModeMono: {fileID: 0}
   doorBehaviour: {fileID: 7959926232811269091}
-  audioSource: {fileID: 0}
 --- !u!114 &7959926232811269091
 MonoBehaviour:
   m_ObjectHideFlags: 0

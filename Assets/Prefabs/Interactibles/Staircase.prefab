@@ -207,13 +207,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 97
   text: Go Down
+  audioSource: {fileID: 0}
   doorHandle: {fileID: 0}
   mainDoor: {fileID: 0}
   additionalBehaviours:
   - {fileID: 3469862663341657192}
   lockModeMono: {fileID: 7048575255733332154}
   doorBehaviour: {fileID: 3682415320867328302}
-  audioSource: {fileID: 0}
 --- !u!114 &3682415320867328302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 1
+  unlockSound: {fileID: 0}
   keyItem: {fileID: 11400000, guid: b28f62c86c055d346886f58195a309bc, type: 2}
   playerSpeakMono: {fileID: 2060498443199059779}
 --- !u!114 &2060498443199059779

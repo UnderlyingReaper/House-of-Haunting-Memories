@@ -2,6 +2,7 @@ using DG.Tweening;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DevTools : MonoBehaviour
@@ -185,6 +186,15 @@ public class DevTools : MonoBehaviour
 
 
 
+    #region Buttons
+    public void SwitchScenes(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    #endregion
+
+
+    
     public void CloseButton()
     {
         Cursor.lockState = CursorLockMode.Locked;

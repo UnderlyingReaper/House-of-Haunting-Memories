@@ -11,6 +11,9 @@ public class AnimationController : MonoBehaviour
 
     [Header("States")]
     public bool isGrabbingBox;
+    private bool _wasLegGrabbingBox;
+
+    public bool equipGun;
     
     // Layer 0: Body Layer
     [SerializeField] static readonly int bodyIdleClip = Animator.StringToHash("BODY Idle");
@@ -18,6 +21,9 @@ public class AnimationController : MonoBehaviour
 
     [SerializeField] static readonly int bodyGrabBoxClip = Animator.StringToHash("BODY Grab Box");
     [SerializeField] static readonly int bodyDropBoxClip = Animator.StringToHash("BODY Drop Box");
+
+    [SerializeField] static readonly int bodyEquipGun = Animator.StringToHash("BODY Take Gun Out");
+    [SerializeField] static readonly int bodyUnequipGun = Animator.StringToHash("Body Gun Put Back");
 
     // Layer 1: Legs Layer
     [SerializeField] static readonly int legIdleClip = Animator.StringToHash("LEGS Idle");
@@ -30,10 +36,9 @@ public class AnimationController : MonoBehaviour
     Vector3 _prevPos;
     int _currBodyState;
     int _currLegState;
-    float _lockedTill;
+    float _bodyLockedTill;
+    float _legLockedTill;
     float _distance;
-    bool _override = false;
-
 
     void Awake()
     {
@@ -50,8 +55,6 @@ public class AnimationController : MonoBehaviour
 
     void Update()
     {
-        if(_override) return;
-
         _distance = Mathf.Abs(transform.position.x - _prevPos.x);
 
 
@@ -74,47 +77,46 @@ public class AnimationController : MonoBehaviour
     }
 
     int GetBodyState() {
-        if (Time.time < _lockedTill) return _currBodyState;
+        if (Time.time < _bodyLockedTill) return _currBodyState;
 
         // Priorities
-        if(isGrabbingBox) return bodyGrabBoxClip;
+        if(equipGun) return bodyEquipGun;
+        else if(!equipGun && _currBodyState == bodyEquipGun) return LockState(bodyUnequipGun, 1);
+
+        else if(isGrabbingBox) return bodyGrabBoxClip;
+        else if(!isGrabbingBox && _currBodyState == bodyGrabBoxClip) return LockState(bodyDropBoxClip, 1.33f);
+
         else if(_distance >= walkThreshold)return bodyWalkClip;
         else return bodyIdleClip;
+
+        int LockState(int s, float t)
+        {
+            _bodyLockedTill = Time.time + t;
+            return s;
+        }
     }
     int GetLegState() {
-        if (Time.time < _lockedTill) return _currLegState;
+        if (Time.time < _legLockedTill) return _currLegState;
 
         // Priorities
-        if (_distance >= walkThreshold) return legWalkClip;
+        if(isGrabbingBox && !_wasLegGrabbingBox)
+        {
+            _wasLegGrabbingBox = true;
+            return LockState(legGrabBoxClip, 1.33f);
+        }
+        else if(!isGrabbingBox && _wasLegGrabbingBox)
+        {
+            _wasLegGrabbingBox = false;
+            return LockState(legDropBoxClip, 1.33f);
+        }
+
+        else if (_distance >= walkThreshold) return legWalkClip;
         else return legIdleClip;
-    }
 
-    int LockState(int s, float t)
-    {
-        _lockedTill = Time.time + t;
-        return s;
-    }
-
-    public IEnumerator GrabBoxOverride()
-    {
-        _override = true;
-        animator.CrossFade(bodyGrabBoxClip, transitionDuration, 0);
-        animator.CrossFade(legGrabBoxClip, transitionDuration, 1);
-
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length + 0.5f);
-
-        isGrabbingBox = true;
-        _override = false;
-    }
-    public IEnumerator DropBoxOverride()
-    {
-        _override = true;
-        animator.CrossFade(bodyDropBoxClip, transitionDuration, 0);
-        animator.CrossFade(legDropBoxClip, transitionDuration, 1);
-
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length + 0.5f);
-
-        isGrabbingBox = false;
-        _override = false;
+        int LockState(int s, float t)
+        {
+            _legLockedTill = Time.time + t;
+            return s;
+        }
     }
 }
