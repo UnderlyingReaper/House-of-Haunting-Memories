@@ -10,7 +10,7 @@ public class BrokenCarInteraction : MonoBehaviour, IInteractible
     [SerializeField] private string text;
 
     [SerializeField] private CinemachineCamera virtualCam;
-    [SerializeField] private List<oneSpeech> playerSpeecheList;
+    [SerializeField] private List<OneSpeech> playerSpeecheList;
 
 
     private IPlayerSpeak _playerSpeak;
@@ -54,7 +54,7 @@ public class BrokenCarInteraction : MonoBehaviour, IInteractible
         controls.Disable();
         virtualCam.gameObject.SetActive(true);
 
-        foreach(oneSpeech speech in playerSpeecheList)
+        foreach(OneSpeech speech in playerSpeecheList)
         {
             sequence.AppendCallback(() => _playerSpeak.SpeakPlayer(IPlayerSpeak.SpeechType.Custom, speech.speechData));
             sequence.AppendInterval(speech.speechData.time);
@@ -70,10 +70,4 @@ public class BrokenCarInteraction : MonoBehaviour, IInteractible
     }
 
     public void InteractStart(Transform interactorTransform) {}
-}
-
-[Serializable]
-struct oneSpeech {
-    public PlayerSpeechData speechData;
-    public float pauseTime;
 }

@@ -10,27 +10,35 @@ public class AnimationController : MonoBehaviour
     [SerializeField] float walkThreshold;
 
     [Header("States")]
-    public bool isGrabbingBox;
-    private bool _wasLegGrabbingBox;
+    public bool knock;
 
     public bool equipGun;
+
+    public bool isGrabbingBox;
+    private bool _wasLegGrabbingBox;
     
-    // Layer 0: Body Layer
+    
+    
+    #region BODY Animations
     [SerializeField] static readonly int bodyIdleClip = Animator.StringToHash("BODY Idle");
     [SerializeField] static readonly int bodyWalkClip = Animator.StringToHash("BODY Walk");
 
     [SerializeField] static readonly int bodyGrabBoxClip = Animator.StringToHash("BODY Grab Box");
     [SerializeField] static readonly int bodyDropBoxClip = Animator.StringToHash("BODY Drop Box");
 
-    [SerializeField] static readonly int bodyEquipGun = Animator.StringToHash("BODY Take Gun Out");
-    [SerializeField] static readonly int bodyUnequipGun = Animator.StringToHash("Body Gun Put Back");
+    [SerializeField] static readonly int bodyKnock = Animator.StringToHash("BODY Knock");
 
-    // Layer 1: Legs Layer
+    [SerializeField] static readonly int bodyEquipGun = Animator.StringToHash("BODY Take Gun Out");
+    [SerializeField] static readonly int bodyUnequipGun = Animator.StringToHash("BODY Gun Put Back");
+    #endregion
+
+    #region LEG Animations
     [SerializeField] static readonly int legIdleClip = Animator.StringToHash("LEGS Idle");
     [SerializeField] static readonly int legWalkClip = Animator.StringToHash("LEGS Walk");
 
     [SerializeField] static readonly int legGrabBoxClip = Animator.StringToHash("LEGS Grab Box");
     [SerializeField] static readonly int legDropBoxClip = Animator.StringToHash("LEGS Drop Box");
+    #endregion
 
 
     Vector3 _prevPos;
@@ -80,8 +88,10 @@ public class AnimationController : MonoBehaviour
         if (Time.time < _bodyLockedTill) return _currBodyState;
 
         // Priorities
-        if(equipGun) return bodyEquipGun;
-        else if(!equipGun && _currBodyState == bodyEquipGun) return LockState(bodyUnequipGun, 1);
+        if(knock) return LockState(bodyKnock, 2.5f);
+
+        else if(equipGun) return bodyEquipGun;
+        else if(!equipGun && _currBodyState == bodyEquipGun) return LockState(bodyUnequipGun, 0.75f);
 
         else if(isGrabbingBox) return bodyGrabBoxClip;
         else if(!isGrabbingBox && _currBodyState == bodyGrabBoxClip) return LockState(bodyDropBoxClip, 1.33f);

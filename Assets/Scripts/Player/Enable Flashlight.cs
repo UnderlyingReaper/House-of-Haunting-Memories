@@ -7,8 +7,10 @@ using UnityEngine.Rendering.Universal;
 public class EnableFlashlight : MonoBehaviour
 {
     [SerializeField] private List<LightData> lightList;
+    [SerializeField] private AudioClip stateChangeClip;
 
     private bool _enabled;
+    private AudioSource _audioSource;
 
     public event Action OnFlashlightEnabled;
     public event Action OnFlashlightDisabled;
@@ -16,6 +18,7 @@ public class EnableFlashlight : MonoBehaviour
     private void Start()
     {
         GameplayInputManager.Instance.playerControls.Gameplay.FlashLight.performed += FlashlightHandle;
+        _audioSource = GetComponentInChildren<AudioSource>();
 
         EquipItem equipItem = GetComponent<EquipItem>();
 
@@ -49,6 +52,8 @@ public class EnableFlashlight : MonoBehaviour
             _enabled = true;
             OnFlashlightEnabled?.Invoke();
         }
+
+        _audioSource.PlayOneShot(stateChangeClip);
     }
 }
 
