@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47afaaf53751fac4d8feb1aab25b344e, type: 3}
-  m_Name: Day2 CheckCupboards Hint
+  m_Name: Day 3 Enter The Basement Hint
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I dont feel safe.
-  time: 2.5
+  text: I should enter the basement.
+  time: 3

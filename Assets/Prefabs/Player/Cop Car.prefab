@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4683971260132403200}
   - component: {fileID: 6402354103142259145}
+  - component: {fileID: 1437159192248820103}
   m_Layer: 5
   m_Name: Olivias House
   m_TagString: Untagged
@@ -159,16 +160,30 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2426652590275920227}
         m_TargetAssemblyTypeName: MapUI, Assembly-CSharp
-        m_MethodName: OnHousePressButton
+        m_MethodName: OnLocationPressButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: HouseInfo, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: LocationInfo, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1437159192248820103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139734732310692715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInActiveOnAwake: 0
+  button: {fileID: 0}
 --- !u!1 &410832462886709926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8e53b2a23727348bb7c629745ba957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locationsList: []
   player: {fileID: 0}
   playerMarker: {fileID: 5978333442695422253}
   markerOffset: {x: 0, y: -50}
@@ -2012,7 +2028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4707494407715096607
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3498,7 +3514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4366048418906275350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4653,7 +4669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2092967751720623266
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4782,6 +4798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200645417695153905}
   - component: {fileID: 3563462994678708482}
+  - component: {fileID: 3482345982591338312}
   m_Layer: 5
   m_Name: Josh House
   m_TagString: Untagged
@@ -4849,7 +4866,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
@@ -4866,6 +4883,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3482345982591338312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7086048021693821299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInActiveOnAwake: 1
+  button: {fileID: 0}
 --- !u!1 &7362555629743500145
 GameObject:
   m_ObjectHideFlags: 0
@@ -5252,6 +5283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2214595851610919377}
   - component: {fileID: 9141027618275942509}
+  - component: {fileID: 7920095399005612543}
   m_Layer: 5
   m_Name: Broken House
   m_TagString: Untagged
@@ -5319,23 +5351,37 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2426652590275920227}
         m_TargetAssemblyTypeName: MapUI, Assembly-CSharp
-        m_MethodName: OnHousePressButton
+        m_MethodName: OnLocationPressButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: HouseInfo, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: LocationInfo, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7920095399005612543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539246757593015538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInActiveOnAwake: 1
+  button: {fileID: 0}
 --- !u!1 &7782931545867948150
 GameObject:
   m_ObjectHideFlags: 0
@@ -5775,6 +5821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128469678186630423}
   - component: {fileID: 4403954588646900745}
+  - component: {fileID: 1226813366417866367}
   m_Layer: 5
   m_Name: User#1295 House
   m_TagString: Untagged
@@ -5842,7 +5889,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
@@ -5859,6 +5906,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1226813366417866367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390970212024009094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInActiveOnAwake: 1
+  button: {fileID: 0}
 --- !u!1 &8603819089481722016
 GameObject:
   m_ObjectHideFlags: 0

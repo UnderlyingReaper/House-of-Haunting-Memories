@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47afaaf53751fac4d8feb1aab25b344e, type: 3}
-  m_Name: Flower 3
+  m_Name: already have food
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: I shouldn't look at these roses... they remind me too much of her, I need
-    to forget.
-  time: 3
+  text: I already took the food out. I should microwave it now.
+  time: 4

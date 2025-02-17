@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47afaaf53751fac4d8feb1aab25b344e, type: 3}
-  m_Name: Day0 Objective 1
+  m_Name: Computer Order Hint
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: "Sigh... Finally, after that long drive, I\u2019ve made it to my new house.
-    I\u2019m starving, but first things first\u2014these boxes aren\u2019t going
-    to move themselves. Once they\u2019re inside, I can finally sit down and eat
-    in peace."
-  time: 10
+  text: I should check the shop on my computer.
+  time: 2

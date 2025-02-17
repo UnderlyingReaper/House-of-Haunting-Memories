@@ -3,7 +3,7 @@ using DG.Tweening;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class HouseInfo : MonoBehaviour
+public class LocationInfo : MonoBehaviour
 {
     [Header("Public House Info")]
     public Transform playerSpawnPoint;
