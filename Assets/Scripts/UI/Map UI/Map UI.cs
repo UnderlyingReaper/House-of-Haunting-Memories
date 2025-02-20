@@ -18,12 +18,13 @@ public class MapUI : MonoBehaviour
 
     public event Action OnMoveStart;
     public event Action OnMoveEnd;
+    private bool _isMoving;
 
 
 
     public void OnLocationPressButton(LocationInfo location)
     {
-        if(location.gameObject.activeSelf) return;
+        if(location.gameObject.activeSelf || _isMoving) return;
 
         foreach(LocationInfo location2 in locationsList)
             location2.gameObject.SetActive(false);
@@ -40,9 +41,13 @@ public class MapUI : MonoBehaviour
         audioSource.DOFade(1, 0.5f);
 
         OnMoveStart?.Invoke();
+        _isMoving = true;
+
         playerMarker.DOAnchorPos(location.correspondingButtonRect.anchoredPosition + markerOffset, 15).SetEase(Ease.InOutSine)
         .OnComplete(() => {
             OnMoveEnd?.Invoke();
+            _isMoving = false;
+
             audioSource.DOFade(0, 0.5f).OnComplete(() => audioSource.Stop());
         });
 

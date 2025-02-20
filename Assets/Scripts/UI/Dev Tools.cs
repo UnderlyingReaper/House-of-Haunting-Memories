@@ -32,6 +32,7 @@ public class DevTools : MonoBehaviour
     private string keyCodeSequence = "HOHMD"; // The key sequence to activate the dev tool
     private string currentInput = ""; // Tracks the player's current input
     private GameObject _playerBody;
+    private Transform _playerTransform;
     private GameObject _interactionPrompt;
     private GameObject _playerVoiceSubtitles;
     private CanvasGroup _inventoryHandler;
@@ -165,7 +166,10 @@ public class DevTools : MonoBehaviour
     }
     private void EnableDevCamera(bool val)
     {
+        if(_playerTransform == null) _playerTransform = GameObject.Find("Player Body").transform.parent.transform;
+
         devCamera.SetActive(val);
+        devCamera.transform.position = new Vector3(_playerTransform.position.x, _playerTransform.position.y, devCamera.transform.position.z);
     }
     #endregion
 

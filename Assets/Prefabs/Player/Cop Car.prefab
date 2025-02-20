@@ -1383,7 +1383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8e53b2a23727348bb7c629745ba957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationsList: []
+  locationsList:
+  - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 0}
   playerMarker: {fileID: 5978333442695422253}
   markerOffset: {x: 0, y: -50}

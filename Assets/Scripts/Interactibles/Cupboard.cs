@@ -128,7 +128,12 @@ public class Cupboard : MonoBehaviour, IInteractible, ISpecialInteraction
         
         virtualCamera.Lens.OrthographicSize = _virtualCamLensOrgSize;
         virtualCamera.gameObject.SetActive(true);
+
         GameplayInputManager.Instance.enabled = false;
+        bool wasEquippingGun = AnimationController.Instance.equipGun;
+        AnimationController.Instance.equipGun = false;
+
+
         audioSource.PlayOneShot(tensionBuildUpClip);
 
         DOVirtual.Float(virtualCamera.Lens.OrthographicSize, finalLens, duration, value => { virtualCamera.Lens.OrthographicSize = value; }).SetEase(Ease.Linear);
@@ -145,6 +150,8 @@ public class Cupboard : MonoBehaviour, IInteractible, ISpecialInteraction
         yield return new WaitForSeconds(stareDuraton);
 
         GameplayInputManager.Instance.enabled = true;
+        AnimationController.Instance.equipGun = wasEquippingGun;
+
         virtualCamera.gameObject.SetActive(false);
 
         OnCupboardCheck?.Invoke(this);

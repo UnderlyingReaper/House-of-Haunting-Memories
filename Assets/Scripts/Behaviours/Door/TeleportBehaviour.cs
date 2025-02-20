@@ -41,7 +41,7 @@ public class TeleportBehaviour : MonoBehaviour, IDoorBehaviour
         if(door.doorHandle != null)
         {
             _sequence.Append(door.doorHandle.DORotate(new Vector3(0, 0, 30), 0.5f))
-            .Append(door.mainDoor.DOScaleX(0, fadeDuration*2));
+            .Append(door.mainDoor?.DOScaleX(0, fadeDuration*2));
         }
 
         yield return new WaitForSeconds(fadeDuration);
@@ -49,12 +49,9 @@ public class TeleportBehaviour : MonoBehaviour, IDoorBehaviour
 
         yield return new WaitForSeconds(delay);
 
-        if(door.doorHandle != null)
-        {
-            _sequence?.Kill();
-            door.doorHandle.rotation = Quaternion.Euler(Vector3.zero);
-            door.mainDoor.localScale = Vector3.one;
-        }
+        if(door.doorHandle != null) door.doorHandle.rotation = Quaternion.Euler(Vector3.zero);
+        if(door.mainDoor != null) door.mainDoor.localScale = Vector3.one;
+        _sequence?.Kill();
 
         _fadeCanvas.DOFade(0, fadeDuration);
         GameplayInputManager.Instance.enabled = true;

@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Note : MonoBehaviour, IInteractible
 {
+    [SerializeField] bool disableObjOnDisable = true;
     [SerializeField] private int priority;
     [SerializeField] private string interactText;
     [SerializeField] private AudioClip readClip;
@@ -31,8 +32,14 @@ public class Note : MonoBehaviour, IInteractible
         _canvasGroup.alpha = 0;
     }
     private void Start() => ui.Back.performed += (InputAction.CallbackContext context) => Close();
-    private void OnEnable() => gameObject.SetActive(true);
-    private void OnDisable() => gameObject.SetActive(false);
+    private void OnEnable()
+    {
+        if(disableObjOnDisable) gameObject.SetActive(true);
+    }
+    private void OnDisable()
+    {
+        if(disableObjOnDisable) gameObject.SetActive(false);
+    }
 
     public int GetPriority()
     {
