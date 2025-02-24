@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,6 +11,7 @@ public class Note : MonoBehaviour, IInteractible
     [SerializeField] private AudioClip readClip;
 
 
+    public event Action OnInteract;
     private bool _isOpen;
     private CanvasGroup _canvasGroup;
     private AudioSource _audioSource;
@@ -59,6 +61,8 @@ public class Note : MonoBehaviour, IInteractible
     public void InteractPerform(Transform interactorTransform)
     {
         if(!enabled) return;
+
+        OnInteract?.Invoke();
 
         if(_isOpen) Close();
         else

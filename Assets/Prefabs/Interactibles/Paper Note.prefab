@@ -473,6 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64dc6c1d3144c2d4981b602da6a2f729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableObjOnDisable: 1
   priority: 1000
   interactText: Read
   readClip: {fileID: 8300000, guid: 4afa1052b3fb70f4490c15a7bf145c72, type: 3}

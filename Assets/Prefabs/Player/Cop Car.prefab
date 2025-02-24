@@ -5824,6 +5824,7 @@ GameObject:
   - component: {fileID: 128469678186630423}
   - component: {fileID: 4403954588646900745}
   - component: {fileID: 1226813366417866367}
+  - component: {fileID: 4757015575502441442}
   m_Layer: 5
   m_Name: User#1295 House
   m_TagString: Untagged
@@ -5898,11 +5899,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2426652590275920227}
         m_TargetAssemblyTypeName: MapUI, Assembly-CSharp
-        m_MethodName: OnHousePressButton
+        m_MethodName: OnLocationPressButton
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: HouseInfo, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: LocationInfo, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5920,8 +5921,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInActiveOnAwake: 1
+  isInActiveOnAwake: 0
   button: {fileID: 0}
+--- !u!114 &4757015575502441442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390970212024009094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e74575967e0cd44ae7e821386e342e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  note: {fileID: 0}
 --- !u!1 &8603819089481722016
 GameObject:
   m_ObjectHideFlags: 0

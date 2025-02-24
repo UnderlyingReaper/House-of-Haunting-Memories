@@ -24,12 +24,12 @@ public class LocationButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         if(isInActiveOnAwake) enabled = false;
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
         _locationName.DOFade(1, 1);
         button.enabled = true;
     }
-    void OnDisable()
+    private void OnDisable()
     {
         _locationName.DOFade(0, 1);
         button.enabled = false;

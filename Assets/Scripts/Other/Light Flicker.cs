@@ -25,9 +25,8 @@ public class LightFlicker : MonoBehaviour
     {
         _lights = new List<Light2D>(GetComponentsInChildren<Light2D>());
         _maxIntensity = _lights[0].intensity;
-
-        StartCoroutine(Flicker());
     }
+    private void OnEnable() => StartCoroutine(Flicker());
 
     private IEnumerator Flicker()
     {
