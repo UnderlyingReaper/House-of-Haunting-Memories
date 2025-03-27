@@ -41,7 +41,7 @@ public class DayNightHandler : MonoBehaviour
     public event Action OnNightSet;
     private float _ambienceOrgVal;
 
-    private void Awake()
+    private void OnEnable()
     {
 
         if(isDay)

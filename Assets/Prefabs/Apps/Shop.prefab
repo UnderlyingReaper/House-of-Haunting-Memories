@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Oh oh, it looks lke theres
+  m_text: 'Oh, it looks like there
 
     nothing today :('
   m_isRightToLeft: 0
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Todays Items
+  m_text: Today's Items
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6c9f716ced6d21c4babfafc84a077c6d, type: 2}
   m_sharedMaterial: {fileID: 144498990320865026, guid: 6c9f716ced6d21c4babfafc84a077c6d, type: 2}
