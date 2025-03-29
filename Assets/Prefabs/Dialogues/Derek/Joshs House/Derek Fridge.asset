@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47afaaf53751fac4d8feb1aab25b344e, type: 3}
-  m_Name: Derek Flower 4
+  m_Name: Derek Fridge
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  text: These flowers look dull
-  time: 2
+  text: Why is the fridge empty?
+  time: 2.5

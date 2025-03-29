@@ -10,6 +10,12 @@ public class Objective : MonoBehaviour
     public bool start = false;
 
     [Space(20)]
+    [Header("Trigger Settings")]
+    [SerializeField] private bool isTriggered = false;
+    [SerializeField] private MonoBehaviour triggerScript;
+    [SerializeField] private string actionName;
+
+    [Space(20)]
     [Header("Main Components")]
     [SerializeField] private List<MonoBehaviour> InitializeMonoList;
 
@@ -45,6 +51,8 @@ public class Objective : MonoBehaviour
 
     void Awake()
     {
+        if(isTriggered) SetTrigger();
+
         _initialize = new();
         foreach(MonoBehaviour mono in InitializeMonoList)
         {
@@ -96,12 +104,29 @@ public class Objective : MonoBehaviour
         }
     }
 
+    private void SetTrigger()
+    {
+        // Access the delegate field using reflection
+        var _fieldInfo = triggerScript.GetType().GetField(actionName);
+
+        #if UNITY_EDITOR
+        Assert.IsNotNull(_fieldInfo);
+        Assert.AreEqual(_fieldInfo.FieldType, typeof(Action));
+        #endif
+
+        // Create a new delegate of the existing action delegate
+        var _actionDelegate = _fieldInfo.GetValue(triggerScript) as Action;
+
+        // Subscribe to the delegate
+        _actionDelegate += StartObjective;
+
+        // Reassign the modified delegate back to the original field
+        _fieldInfo.SetValue(triggerScript, _actionDelegate);
+    }
+
     public void StartObjective()
     {
-        if(!ObjectiveHandler.Instance.CanRunObjective(this))
-        {
-            return;
-        }
+        if(!ObjectiveHandler.Instance.CanRunObjective(this)) return;
 
         ObjectiveHandler.Instance.StartObjective(this);
 

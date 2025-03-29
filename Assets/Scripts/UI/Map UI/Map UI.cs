@@ -8,6 +8,7 @@ public class MapUI : MonoBehaviour
     [SerializeField] private List<LocationInfo> locationsList;
     [SerializeField] private Transform player;
     [SerializeField] private RectTransform playerMarker;
+    [SerializeField] private float duration = 15;
     [SerializeField] private Vector2 markerOffset = new Vector3(0, -50);
 
     [Header("Audio")]
@@ -16,7 +17,7 @@ public class MapUI : MonoBehaviour
 
     
 
-    public event Action OnMoveStart;
+    public Action OnMoveStart;
     public event Action OnMoveEnd;
     private bool _isMoving;
 
@@ -43,7 +44,7 @@ public class MapUI : MonoBehaviour
         OnMoveStart?.Invoke();
         _isMoving = true;
 
-        playerMarker.DOAnchorPos(location.correspondingButtonRect.anchoredPosition + markerOffset, 15).SetEase(Ease.InOutSine)
+        playerMarker.DOAnchorPos(location.correspondingButtonRect.anchoredPosition + markerOffset, duration).SetEase(Ease.InOutSine)
         .OnComplete(() => {
             OnMoveEnd?.Invoke();
             _isMoving = false;

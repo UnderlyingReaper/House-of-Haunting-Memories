@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -11,7 +12,8 @@ public class DoorDialoguesBehaviour : MonoBehaviour, IDoorBehaviour
 
     private bool _firstinteraction = true;
     private IPlayerSpeak _playerSpeak;
-    private Transform _player;
+    public Action OnStart;
+    public Action OnComplete;
 
 
     private PlayerControls.GameplayActions controls {
@@ -22,12 +24,12 @@ public class DoorDialoguesBehaviour : MonoBehaviour, IDoorBehaviour
     private void Start()
     {
         _playerSpeak = GetComponent<IPlayerSpeak>();
-        _player = AnimationController.Instance.transform;
     }
 
     public void InteractCancel(Door door) {}
     public void InteractPerform(Door door)
     {
+        OnStart?.Invoke();
         Sequence sequence = DOTween.Sequence();
         
         sequence.AppendCallback(() => AnimationController.Instance.knock = true)
@@ -50,6 +52,7 @@ public class DoorDialoguesBehaviour : MonoBehaviour, IDoorBehaviour
         sequence.OnComplete(() => {
             AnimationController.Instance.knock = false;
             controls.Enable();
+            OnComplete?.Invoke();
         });
     }
     public void InteractStart(Door door) {}

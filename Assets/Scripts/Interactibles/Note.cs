@@ -25,7 +25,6 @@ public class Note : MonoBehaviour, IInteractible
 
 
 
-
     private void Awake()
     {
         _canvasGroup = GetComponentInChildren<CanvasGroup>();
@@ -43,29 +42,20 @@ public class Note : MonoBehaviour, IInteractible
         if(disableObjOnDisable) gameObject.SetActive(false);
     }
 
-    public int GetPriority()
-    {
-        return priority;
-    }
+    public int GetPriority() => priority;
     public string GetText()
     {
         if(!enabled) return null;
         else return interactText;
     }
-    public Transform GetTransform()
-    {
-        return transform;
-    }
+    public Transform GetTransform() => transform;
 
     public void InteractCancel(Transform interactorTransform) {}
     public void InteractPerform(Transform interactorTransform)
     {
         if(!enabled) return;
 
-        OnInteract?.Invoke();
-
-        if(_isOpen) Close();
-        else
+        if(!_isOpen)
         {
             _audioSource.PlayOneShot(readClip);
             _canvasGroup.DOFade(1, 1);
@@ -74,6 +64,8 @@ public class Note : MonoBehaviour, IInteractible
             controls.Disable();
             ui.Enable();
         }
+
+        OnInteract?.Invoke();
     }
     public void InteractStart(Transform interactorTransform) {}
 

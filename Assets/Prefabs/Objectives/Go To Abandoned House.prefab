@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5330945284450991397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8272820025199803615}
+  - component: {fileID: 6863036685744127703}
+  - component: {fileID: 8297016764012074294}
+  - component: {fileID: 4488086193905157509}
+  m_Layer: 0
+  m_Name: Go To Abandoned House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8272820025199803615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330945284450991397}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6863036685744127703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330945284450991397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b177508ce28281b49b8ee698eb3af116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveTask: Go To Abandoned House
+  start: 0
+  isTriggered: 0
+  triggerScript: {fileID: 0}
+  actionName: 
+  InitializeMonoList: []
+  conditionMono: {fileID: 4488086193905157509}
+  progressMono: {fileID: 0}
+  endMono: {fileID: 0}
+  additionalEndMono: []
+  nextObjective: {fileID: 0}
+  makePlayerSpeakMono: {fileID: 8297016764012074294}
+  speechDelay: 0
+  timeToFinish: 35
+--- !u!114 &8297016764012074294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330945284450991397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d779ffa453a5bfb438c8a727f6184113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSpeechData: {fileID: 0}
+  hintSpeechData: {fileID: 11400000, guid: b647dd562657f3449a8ce988418d30f3, type: 2}
+--- !u!114 &4488086193905157509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330945284450991397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15a8cf44b87a27409e492c560fef963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionSource: {fileID: 0}
+  actionName: OnMoveStart

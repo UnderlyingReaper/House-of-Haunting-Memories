@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LocationButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] bool isInActiveOnAwake;
+    [SerializeField] bool isInactiveOnAwake;
     public Button button;
 
 
@@ -21,7 +21,7 @@ public class LocationButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         button = GetComponent<Button>();
         _locationName = transform.GetChild(transform.childCount - 1).GetComponent<TextMeshProUGUI>();
 
-        if(isInActiveOnAwake) enabled = false;
+        if(isInactiveOnAwake) enabled = false;
     }
 
     private void OnEnable()

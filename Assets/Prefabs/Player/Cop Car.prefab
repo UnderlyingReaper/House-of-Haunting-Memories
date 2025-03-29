@@ -1388,6 +1388,7 @@ MonoBehaviour:
   - {fileID: 0}
   player: {fileID: 0}
   playerMarker: {fileID: 5978333442695422253}
+  duration: 15
   markerOffset: {x: 0, y: -50}
   audioSource: {fileID: 8070745712007295842}
   engineStart: {fileID: 8300000, guid: 85a9b3dee0b6fe8428b04e90a6a47923, type: 3}

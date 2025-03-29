@@ -5,15 +5,14 @@ public class ClickEnableLocation : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Note note;
 
-
     private bool _allow = false;
 
     private void Start()
     {
-        note.OnInteract += OnInteract;
+        note.OnInteract += Allow;
     }
 
-    private void OnInteract() => _allow = true;
+    private void Allow() => _allow = true;
     
     public void OnPointerClick(PointerEventData eventData)
     {
