@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInActiveOnAwake: 0
+  isInactiveOnAwake: 0
   button: {fileID: 0}
 --- !u!1 &410832462886709926
 GameObject:
@@ -4898,7 +4898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInActiveOnAwake: 1
+  isInactiveOnAwake: 0
   button: {fileID: 0}
 --- !u!1 &7362555629743500145
 GameObject:
@@ -5383,7 +5383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInActiveOnAwake: 1
+  isInactiveOnAwake: 0
   button: {fileID: 0}
 --- !u!1 &7782931545867948150
 GameObject:
@@ -5922,7 +5922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b70088831d21442893a7b9d70b8a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInActiveOnAwake: 0
+  isInactiveOnAwake: 0
   button: {fileID: 0}
 --- !u!114 &4757015575502441442
 MonoBehaviour:

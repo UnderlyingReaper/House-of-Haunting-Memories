@@ -33,6 +33,7 @@ Transform:
   m_Children:
   - {fileID: 332611500028245852}
   - {fileID: 7734193155120558006}
+  - {fileID: 2307438789113604561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &588245807003657583
@@ -97,6 +98,14 @@ PrefabInstance:
     - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
       propertyPath: isTriggered
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: nextObjective
+      value: 
+      objectReference: {fileID: 1005772909116386265}
+    - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: objectiveTask
+      value: Go To The Abandoned House
       objectReference: {fileID: 0}
     - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -225,3 +234,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b177508ce28281b49b8ee698eb3af116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &5965966177952290062
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 868360249658678667}
+    m_Modifications:
+    - target: {fileID: 4488086193905157509, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: actionName
+      value: OnInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330945284450991397, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_Name
+      value: Investigate Abandoned House
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: actionName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: isTriggered
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: timeToFinish
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: objectiveTask
+      value: Investigate The House
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: triggerScript
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297016764012074294, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+      propertyPath: hintSpeechData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7762db356956020468f44489dbfb1597, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+--- !u!114 &1005772909116386265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6863036685744127703, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+  m_PrefabInstance: {fileID: 5965966177952290062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b177508ce28281b49b8ee698eb3af116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2307438789113604561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8272820025199803615, guid: 2fc4217d9ff9d4b44b44a682975b82ae, type: 3}
+  m_PrefabInstance: {fileID: 5965966177952290062}
+  m_PrefabAsset: {fileID: 0}

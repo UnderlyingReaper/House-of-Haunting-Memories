@@ -11,7 +11,7 @@ public class Note : MonoBehaviour, IInteractible
     [SerializeField] private AudioClip readClip;
 
 
-    public event Action OnInteract;
+    public Action OnInteract;
     private bool _isOpen;
     private CanvasGroup _canvasGroup;
     private AudioSource _audioSource;
