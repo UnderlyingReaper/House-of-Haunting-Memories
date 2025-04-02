@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
 
 public class ClickEnableLocation : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Note note;
 
     private bool _allow = false;
+    public Action OnLocate;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class ClickEnableLocation : MonoBehaviour, IPointerClickHandler
 
         LocationButton locationButton = GetComponent<LocationButton>();
         locationButton.enabled = true;
+        OnLocate?.Invoke();
 
         enabled = false;
     }
