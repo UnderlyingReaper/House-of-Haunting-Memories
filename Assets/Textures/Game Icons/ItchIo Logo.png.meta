@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ItchIo Logo_0: 8734134873482495883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
