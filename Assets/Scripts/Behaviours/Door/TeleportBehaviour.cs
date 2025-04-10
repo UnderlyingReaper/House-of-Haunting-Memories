@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class TeleportBehaviour : MonoBehaviour, IDoorBehaviour
 
     Transform _player;
     CanvasGroup _fadeCanvas;
+
+    public Action OnTeleport;
     
 
 
@@ -46,7 +49,8 @@ public class TeleportBehaviour : MonoBehaviour, IDoorBehaviour
 
         yield return new WaitForSeconds(fadeDuration);
         _player.transform.position = teleportPoint.position;
-
+        OnTeleport?.Invoke();
+        
         yield return new WaitForSeconds(delay);
 
         if(door.doorHandle != null) door.doorHandle.rotation = Quaternion.Euler(Vector3.zero);
@@ -63,8 +67,8 @@ public class TeleportBehaviour : MonoBehaviour, IDoorBehaviour
     {
         if(source == null) return;
         
-        source.volume = Random.Range(0.6f, 0.9f);
-        source.pitch = Random.Range(0.85f, 1.2f);
+        source.volume = UnityEngine.Random.Range(0.6f, 0.9f);
+        source.pitch = UnityEngine.Random.Range(0.85f, 1.2f);
 
         source.PlayOneShot(clip);
     }
