@@ -266,6 +266,8 @@ GameObject:
   m_Component:
   - component: {fileID: 74429293}
   - component: {fileID: 74429294}
+  - component: {fileID: 74429295}
+  - component: {fileID: 74429296}
   m_Layer: 0
   m_Name: Sequence
   m_TagString: Untagged
@@ -303,9 +305,56 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: 3930101140426975322, guid: 418bafe4aa65a514eb8e821d149ad8b3, type: 2}
+    value: {fileID: 1664824925}
+  - key: {fileID: -4861857115047504481, guid: 418bafe4aa65a514eb8e821d149ad8b3, type: 2}
+    value: {fileID: 74429296}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &74429295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74429292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a840739dd053e694583b9cc714323fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Credits
+--- !u!114 &74429296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74429292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 7040454b9c3c6974b9caeaad4f0aebac, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 74429295}
+          m_TargetAssemblyTypeName: SwitchSceneTrigger, Assembly-CSharp
+          m_MethodName: SwitchScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &322751990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1160,7 @@ GameObject:
   - component: {fileID: 1664824923}
   - component: {fileID: 1664824922}
   - component: {fileID: 1664824921}
+  - component: {fileID: 1664824925}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1205,6 +1255,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1664824925
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664824920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb23835fd32cd2646942456e5f6f5ad9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1736930753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1504,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852483924}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
