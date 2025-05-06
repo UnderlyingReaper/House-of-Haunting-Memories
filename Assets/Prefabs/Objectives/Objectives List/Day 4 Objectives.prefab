@@ -38,6 +38,7 @@ Transform:
   - {fileID: 3460880912526221299}
   - {fileID: 6206553983919349591}
   - {fileID: 1501598034235823322}
+  - {fileID: 9094956482917896721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &588245807003657583
@@ -83,6 +84,77 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &3232914738594324043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9094956482917896721}
+  - component: {fileID: 3106958975405496788}
+  - component: {fileID: 5477367710476493538}
+  m_Layer: 0
+  m_Name: Arrest Josh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9094956482917896721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232914738594324043}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 868360249658678667}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3106958975405496788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232914738594324043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b177508ce28281b49b8ee698eb3af116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveTask: Find Josh
+  start: 0
+  isTriggered: 1
+  triggerScript: {fileID: 0}
+  actionName: OnTeleport
+  InitializeMonoList: []
+  conditionMono: {fileID: 5477367710476493538}
+  progressMono: {fileID: 0}
+  endMono: {fileID: 0}
+  additionalEndMono: []
+  nextObjective: {fileID: 0}
+  makePlayerSpeakMono: {fileID: 0}
+  speechDelay: 10000
+  timeToFinish: 10000
+--- !u!114 &5477367710476493538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232914738594324043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff31ee279f979345bb19a9b068f177a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1845255703920530281
 PrefabInstance:
   m_ObjectHideFlags: 0
